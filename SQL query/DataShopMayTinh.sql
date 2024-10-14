@@ -97,3 +97,19 @@ UPDATE MayTinh SET hinh_anh = @ImageData WHERE ma_may_tinh = N'MT09';
 SELECT @ImageData = BulkColumn
 FROM OPENROWSET(BULK 'D:\DBMS\MayTinhPic\MT10.jpg', SINGLE_BLOB) AS Image;
 UPDATE MayTinh SET hinh_anh = @ImageData WHERE ma_may_tinh = N'MT10';
+
+-- Thêm dữ liệu khuyến mãi
+INSERT INTO KhuyenMai (ma_khuyen_mai, ten_khuyen_mai, mo_ta, phan_tram_giam, so_tien_giam, ngay_bat_dau, ngay_ket_thuc)
+VALUES 
+('KM01', N'Giảm giá cuối năm', N'Giảm 15% trong tháng 12.', 15, NULL, '2024-12-01', '2024-12-31'),
+('KM02', N'Giảm giá học sinh, sinh viên', N'Giảm 10% cho học sinh, sinh viên khi mua máy tính.', 10, NULL, '2024-09-01', '2024-12-31'),
+('KM03', N'Giảm giá mùa hè', N'Giảm 20% cho mùa hè.', 20, NULL, '2024-06-01', '2024-08-31');
+INSERT INTO SanPham_KhuyenMai (ma_may_tinh, ma_khuyen_mai)
+VALUES 
+('MT01', 'KM01'),
+('MT02', 'KM01'),
+('MT03', 'KM02'),
+('MT04', 'KM03'),
+('MT05', 'KM01'),
+('MT06', 'KM03'),
+('MT07', 'KM02');

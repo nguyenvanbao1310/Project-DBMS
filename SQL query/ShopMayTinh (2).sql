@@ -53,7 +53,6 @@ CREATE TABLE KhuyenMai (
     so_tien_giam INT,
     ngay_bat_dau DATE,
     ngay_ket_thuc DATE,
-    trang_thai CHAR(50)
 );
 
 CREATE TABLE DonHang (
@@ -61,6 +60,7 @@ CREATE TABLE DonHang (
     ma_khach_hang VARCHAR(50),
     ngay_dat_hang DATE,
     tong_tien INT,
+    trang_thai INT,
     FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang)
 );
 
@@ -86,9 +86,9 @@ CREATE TABLE DonHangChiTiet (
 );
 
 CREATE TABLE SanPham_KhuyenMai (
-    ma_san_pham VARCHAR(50),
+    ma_may_tinh VARCHAR(50),
     ma_khuyen_mai VARCHAR(50),
-    PRIMARY KEY (ma_san_pham, ma_khuyen_mai),
-    FOREIGN KEY (ma_san_pham) REFERENCES MayTinh(ma_may_tinh),
+    PRIMARY KEY (ma_may_tinh, ma_khuyen_mai),
+    FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh),
     FOREIGN KEY (ma_khuyen_mai) REFERENCES KhuyenMai(ma_khuyen_mai)
 );
