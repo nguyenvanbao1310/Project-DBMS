@@ -33,16 +33,16 @@ VALUES
 
 INSERT INTO MayTinh (ma_may_tinh, ten_may_tinh, mo_ta, gia_tien, ton_kho, cpu, ram, o_cung, card_roi, man_hinh, trong_luong, nam_san_suat, bao_hanh)
 VALUES 
-('MT01', 'Dell XPS 13', N'Laptop siêu mỏng, hiệu năng cao, phù hợp cho văn phòng và du lịch.', 29000000, 10, 'Intel Core i7-1165G7', '16GB LPDDR4x', '512GB SSD', 'Intel Iris Xe', '13.4 inch FHD+', 1.2, 2023, N'12 tháng'),
-('MT02', 'ASUS ROG Zephyrus G14', N'Laptop gaming mạnh mẽ với thiết kế nhỏ gọn, dành cho game thủ.', 35000000, 8, 'AMD Ryzen 9 5900HS', '32GB DDR4', '1TB SSD', 'NVIDIA GeForce RTX 3060', '14 inch QHD', 1.6, 2023, N'12 tháng'),
-('MT03', 'HP Spectre x360', N'Laptop 2 trong 1 với thiết kế đẹp và tính năng cảm ứng.', 32000000, 5, 'Intel Core i7-1250U', '16GB LPDDR4x', '1TB SSD', 'Intel Iris Xe', '13.3 inch FHD', 1.3, 2023, N'12 tháng'),
-('MT04', 'Lenovo ThinkPad X1 Carbon', N'Laptop doanh nhân bền bỉ, hiệu suất cao, bàn phím tuyệt vời.', 40000000, 6, 'Intel Core i7-1260P', '16GB LPDDR5', '512GB SSD', 'Intel Iris Xe', '14 inch FHD', 1.1, 2023, N'12 tháng'),
-('MT05', 'Acer Aspire 5', N'Laptop văn phòng với hiệu năng ổn định và giá cả phải chăng.', 15000000, 15, 'Intel Core i5-1135G7', '8GB DDR4', '512GB SSD', 'Intel Iris Xe', '15.6 inch FHD', 1.8, 2022, N'12 tháng'),
-('MT06', 'Microsoft Surface Laptop 4', N'Laptop mỏng nhẹ với màn hình cảm ứng và thời lượng pin lâu.', 29000000, 7, 'Intel Core i5-1135G7', '16GB LPDDR4x', '512GB SSD', 'Intel Iris Xe', '13.5 inch', 1.3, 2023, N'12 tháng'),
-('MT07', 'Razer Blade 15', N'Laptop gaming với thiết kế đẹp và hiệu năng mạnh mẽ.', 45000000, 4, 'Intel Core i7-12800H', '16GB DDR5', '1TB SSD', 'NVIDIA GeForce RTX 3070', '15.6 inch FHD', 2.1, 2023, N'12 tháng'),
-('MT08', 'Apple MacBook Air M1', N'Laptop nhẹ nhàng, hiệu năng cao với chip M1.', 29000000, 10, 'Apple M1', '8GB', '256GB SSD', 'Apple GPU', '13.3 inch Retina', 1.29, 2020, N'12 tháng'),
-('MT09', 'Dell G5 15', N'Laptop gaming với cấu hình tốt và giá cả hợp lý.', 27000000, 9, 'Intel Core i5-10500H', '8GB DDR4', '512GB SSD', 'NVIDIA GeForce GTX 1650', '15.6 inch FHD', 2.5, 2021, N'12 tháng'),
-('MT10', 'HP Envy x360', N'Laptop 2 trong 1 linh hoạt với màn hình cảm ứng.', 21000000, 8, 'AMD Ryzen 5 5500U', '16GB DDR4', '512GB SSD', 'AMD Radeon Graphics', '15.6 inch FHD', 1.6, 2022, N'12 tháng');
+('mt01', 'Dell XPS 13', N'Laptop siêu mỏng, hiệu năng cao, phù hợp cho văn phòng và du lịch.', 29000000, 10, 'Intel Core i7-1165G7', '16GB LPDDR4x', '512GB SSD', 'Intel Iris Xe', '13.4 inch FHD+', 1.2, 2023, N'12 tháng'),
+('mt02', 'ASUS ROG Zephyrus G14', N'Laptop gaming mạnh mẽ với thiết kế nhỏ gọn, dành cho game thủ.', 35000000, 8, 'AMD Ryzen 9 5900HS', '32GB DDR4', '1TB SSD', 'NVIDIA GeForce RTX 3060', '14 inch QHD', 1.6, 2023, N'12 tháng'),
+('mt03', 'HP Spectre x360', N'Laptop 2 trong 1 với thiết kế đẹp và tính năng cảm ứng.', 32000000, 5, 'Intel Core i7-1250U', '16GB LPDDR4x', '1TB SSD', 'Intel Iris Xe', '13.3 inch FHD', 1.3, 2023, N'12 tháng'),
+('mt04', 'Lenovo ThinkPad X1 Carbon', N'Laptop doanh nhân bền bỉ, hiệu suất cao, bàn phím tuyệt vời.', 40000000, 6, 'Intel Core i7-1260P', '16GB LPDDR5', '512GB SSD', 'Intel Iris Xe', '14 inch FHD', 1.1, 2023, N'12 tháng'),
+('mt05', 'Acer Aspire 5', N'Laptop văn phòng với hiệu năng ổn định và giá cả phải chăng.', 15000000, 15, 'Intel Core i5-1135G7', '8GB DDR4', '512GB SSD', 'Intel Iris Xe', '15.6 inch FHD', 1.8, 2022, N'12 tháng'),
+('mt06', 'Microsoft Surface Laptop 4', N'Laptop mỏng nhẹ với màn hình cảm ứng và thời lượng pin lâu.', 29000000, 7, 'Intel Core i5-1135G7', '16GB LPDDR4x', '512GB SSD', 'Intel Iris Xe', '13.5 inch', 1.3, 2023, N'12 tháng'),
+('mt07', 'Razer Blade 15', N'Laptop gaming với thiết kế đẹp và hiệu năng mạnh mẽ.', 45000000, 4, 'Intel Core i7-12800H', '16GB DDR5', '1TB SSD', 'NVIDIA GeForce RTX 3070', '15.6 inch FHD', 2.1, 2023, N'12 tháng'),
+('mt08', 'Apple MacBook Air M1', N'Laptop nhẹ nhàng, hiệu năng cao với chip M1.', 29000000, 10, 'Apple M1', '8GB', '256GB SSD', 'Apple GPU', '13.3 inch Retina', 1.29, 2020, N'12 tháng'),
+('mt09', 'Dell G5 15', N'Laptop gaming với cấu hình tốt và giá cả hợp lý.', 27000000, 9, 'Intel Core i5-10500H', '8GB DDR4', '512GB SSD', 'NVIDIA GeForce GTX 1650', '15.6 inch FHD', 2.5, 2021, N'12 tháng'),
+('mt10', 'HP Envy x360', N'Laptop 2 trong 1 linh hoạt với màn hình cảm ứng.', 21000000, 8, 'AMD Ryzen 5 5500U', '16GB DDR4', '512GB SSD', 'AMD Radeon Graphics', '15.6 inch FHD', 1.6, 2022, N'12 tháng');
 
 -- Thêm hình ảnh vào các máy tính
 DECLARE @ImageData VARBINARY(MAX);
@@ -101,15 +101,35 @@ UPDATE MayTinh SET hinh_anh = @ImageData WHERE ma_may_tinh = N'MT10';
 -- Thêm dữ liệu khuyến mãi
 INSERT INTO KhuyenMai (ma_khuyen_mai, ten_khuyen_mai, mo_ta, phan_tram_giam, so_tien_giam, ngay_bat_dau, ngay_ket_thuc)
 VALUES 
-('KM01', N'Giảm giá cuối năm', N'Giảm 15% trong tháng 12.', 15, NULL, '2024-12-01', '2024-12-31'),
-('KM02', N'Giảm giá học sinh, sinh viên', N'Giảm 10% cho học sinh, sinh viên khi mua máy tính.', 10, NULL, '2024-09-01', '2024-12-31'),
-('KM03', N'Giảm giá mùa hè', N'Giảm 20% cho mùa hè.', 20, NULL, '2024-06-01', '2024-08-31');
+('km01', N'Giảm giá cuối năm', N'Giảm 15% trong tháng 12.', 15, NULL, '2024-12-01', '2024-12-31'),
+('km02', N'Giảm giá học sinh, sinh viên', N'Giảm 10% cho học sinh, sinh viên khi mua máy tính.', 10, NULL, '2024-09-01', '2024-12-31'),
+('km03', N'Giảm giá mùa hè', N'Giảm 20% cho mùa hè.', 20, NULL, '2024-06-01', '2024-08-31');
 INSERT INTO SanPham_KhuyenMai (ma_may_tinh, ma_khuyen_mai)
 VALUES 
-('MT01', 'KM01'),
-('MT02', 'KM01'),
-('MT03', 'KM02'),
-('MT04', 'KM03'),
-('MT05', 'KM01'),
-('MT06', 'KM03'),
-('MT07', 'KM02');
+('mt01', 'km01'),
+('mt02', 'km01'),
+('mt03', 'km02'),
+('mt04', 'km03'),
+('mt05', 'km01'),
+('mt06', 'km03'),
+('mt07', 'km02');
+
+---thêm đơn hàng
+INSERT INTO DonHang (ma_don_hang, ma_khach_hang, ngay_dat_hang, tong_tien, trang_thai) 
+VALUES 
+('dh0001', 'kh0001', '2024-10-01', 64000000, 1),
+('dh0002', 'kh0002', '2024-10-02', 32000000, 1),
+('dh0003', 'kh0003', '2024-10-03', 69000000, 2),
+('dh0004', 'kh0004', '2024-10-04', 15000000, 2),
+('dh0005', 'kh0005', '2024-10-05', 58000000, 3);
+
+INSERT INTO DonHangChiTiet (ma_don_hang, ma_may_tinh, gia_ban, so_luong) 
+VALUES 
+('dh0001', 'mt01', 29000000, 1),
+('dh0001', 'mt02', 35000000, 1),
+('dh0002', 'mt03', 32000000, 1),
+('dh0003', 'mt01', 29000000, 1),
+('dh0003', 'mt04', 40000000, 1),
+('dh0004', 'mt05', 15000000, 1),
+('dh0005', 'mt01', 29000000, 1),
+('dh0005', 'mt06', 29000000, 1);

@@ -14,8 +14,8 @@ CREATE TABLE MayTinh (
     o_cung NVARCHAR(255) NOT NULL,
     card_roi NVARCHAR(255) NOT NULL,
     man_hinh NVARCHAR(255) NOT NULL,
-	trong_luong FLOAT,
-	nam_san_suat INT,
+	trong_luong FLOAT NOT NULL,
+	nam_san_suat INT NOT NUll,
     bao_hanh NVARCHAR(255) NOT NULL,
     hinh_anh VARBINARY(MAX)
 );
@@ -32,7 +32,7 @@ CREATE TABLE ChuShop (
     email VARCHAR(255) NOT NULL UNIQUE,
     dia_chi NVARCHAR(255),
     so_dien_thoai VARCHAR(20) UNIQUE,
-	FOREIGN KEY (ma_chu_shop) REFERENCES TaiKhoan(ma_nguoi_dung)
+	FOREIGN KEY (ma_chu_shop) REFERENCES TaiKhoan(ma_nguoi_dung) ON DELETE CASCADE
 );
 
 CREATE TABLE KhachHang (
@@ -41,7 +41,7 @@ CREATE TABLE KhachHang (
     email VARCHAR(255) NOT NULL UNIQUE,
     dia_chi NVARCHAR(255),
     so_dien_thoai VARCHAR(20) UNIQUE,
-	FOREIGN KEY (ma_khach_hang) REFERENCES TaiKhoan(ma_nguoi_dung)
+	FOREIGN KEY (ma_khach_hang) REFERENCES TaiKhoan(ma_nguoi_dung) ON DELETE CASCADE
 );
 
 
@@ -61,7 +61,7 @@ CREATE TABLE DonHang (
     ngay_dat_hang DATE,
     tong_tien INT,
     trang_thai INT,
-    FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang)
+    FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang) ON DELETE CASCADE
 );
 
 CREATE TABLE DanhGia (
@@ -72,7 +72,7 @@ CREATE TABLE DanhGia (
     ngay_danh_gia DATE,
     noi_dung TEXT,
     FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang),
-    FOREIGN KEY (ma_don_hang) REFERENCES DonHang(ma_don_hang)
+    FOREIGN KEY (ma_don_hang) REFERENCES DonHang(ma_don_hang) ON DELETE CASCADE
 );
 
 CREATE TABLE DonHangChiTiet (
@@ -81,14 +81,14 @@ CREATE TABLE DonHangChiTiet (
     gia_ban INT,
     so_luong INT,
     PRIMARY KEY (ma_don_hang, ma_may_tinh),
-    FOREIGN KEY (ma_don_hang) REFERENCES DonHang(ma_don_hang),
-    FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh)
+    FOREIGN KEY (ma_don_hang) REFERENCES DonHang(ma_don_hang) ON DELETE CASCADE,
+    FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh) ON DELETE CASCADE
 );
 
 CREATE TABLE SanPham_KhuyenMai (
     ma_may_tinh VARCHAR(50),
     ma_khuyen_mai VARCHAR(50),
     PRIMARY KEY (ma_may_tinh, ma_khuyen_mai),
-    FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh),
-    FOREIGN KEY (ma_khuyen_mai) REFERENCES KhuyenMai(ma_khuyen_mai)
+    FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh) ON DELETE CASCADE,
+    FOREIGN KEY (ma_khuyen_mai) REFERENCES KhuyenMai(ma_khuyen_mai) ON DELETE CASCADE
 );
