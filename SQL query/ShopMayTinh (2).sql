@@ -70,7 +70,7 @@ CREATE TABLE DanhGia (
     ma_don_hang VARCHAR(50),
     so_sao_danh_gia INT CHECK (so_sao_danh_gia BETWEEN 1 AND 5),
     ngay_danh_gia DATE,
-    noi_dung TEXT,
+    noi_dung NVARCHAR(255),
     FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang),
     FOREIGN KEY (ma_don_hang) REFERENCES DonHang(ma_don_hang) ON DELETE CASCADE
 );

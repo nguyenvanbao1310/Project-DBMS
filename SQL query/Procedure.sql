@@ -172,32 +172,56 @@ BEGIN
 END;
 
 ---Thêm đơn hàng
+IF OBJECT_ID('dbo.ThemDonHang', 'P') IS NOT NULL
+	DROP PROCEDURE dbo.ThemDonHang;
+GO
 CREATE PROCEDURE dbo.ThemDonHang
-    @ma_khach_hang VARCHAR(50),
-    @ngay_dat_hang DATE,
-    @tong_tien INT,
-    @trang_thai INT,
-    @chi_tiet NVARCHAR(MAX)  -- Tham số chứa chuỗi JSON
+	@ma_khach_hang VARCHAR(50),
+	@ngay_dat_hang DATE,
+	@tong_tien INT,
+	@trang_thai INT
+	AS
+	BEGIN
+	DECLARE @ma_don_hang VARCHAR(50);
+
+	-- Gọi hàm để tạo mã đơn hàng mới
+	SET @ma_don_hang = dbo.TaoMaDonHang();
+
+	-- Thêm đơn hàng mới vào bảng
+	INSERT INTO DonHang (ma_don_hang, ma_khach_hang, ngay_dat_hang, tong_tien, trang_thai)
+	VALUES (@ma_don_hang, @ma_khach_hang, @ngay_dat_hang, @tong_tien, @trang_thai);
+END;
+
+---thêm đơn hàng chi tiết
+IF OBJECT_ID('dbo.ThemDonHangChiTiet', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.ThemDonHangChiTiet;
+GO
+CREATE PROCEDURE dbo.ThemDonHangChiTiet
+    @ma_don_hang VARCHAR(50),
+    @ma_may_tinh VARCHAR(50),
+    @gia_ban INT,
+    @so_luong INT
 AS
 BEGIN
-    DECLARE @ma_don_hang VARCHAR(50);
+    -- Kiểm tra xem đơn hàng đã tồn tại chưa
+    IF NOT EXISTS (SELECT 1 FROM DonHang WHERE ma_don_hang = @ma_don_hang)
+    BEGIN
+        RAISERROR('Đơn hàng không tồn tại.', 16, 1);
+        RETURN;
+    END
 
-    -- Gọi hàm để tạo mã đơn hàng mới
-    SET @ma_don_hang = dbo.TaoMaDonHang();
+    -- Kiểm tra xem máy tính đã tồn tại chưa
+    IF NOT EXISTS (SELECT 1 FROM MayTinh WHERE ma_may_tinh = @ma_may_tinh)
+    BEGIN
+        RAISERROR('Máy tính không tồn tại.', 16, 1);
+        RETURN;
+    END
 
-    -- Thêm đơn hàng mới vào bảng DonHang
-    INSERT INTO DonHang (ma_don_hang, ma_khach_hang, ngay_dat_hang, tong_tien, trang_thai)
-    VALUES (@ma_don_hang, @ma_khach_hang, @ngay_dat_hang, @tong_tien, @trang_thai);
-
-    -- Thêm chi tiết đơn hàng vào bảng DonHangChiTiet từ chuỗi JSON
+    -- Thêm chi tiết đơn hàng vào bảng DonHangChiTiet
     INSERT INTO DonHangChiTiet (ma_don_hang, ma_may_tinh, gia_ban, so_luong)
-    SELECT 
-        @ma_don_hang, 
-        JSON_VALUE(value, '$.ma_may_tinh'), 
-        JSON_VALUE(value, '$.gia_ban'), 
-        JSON_VALUE(value, '$.so_luong')
-    FROM OPENJSON(@chi_tiet) AS value;
+    VALUES (@ma_don_hang, @ma_may_tinh, @gia_ban, @so_luong);
 END;
+
 
 ---Cập nhật trạng thái của đơn hàng 1: hoàn thành, 2: chưa hoàn thành, 3: hủy
 IF OBJECT_ID('dbo.CapNhatTrangThaiDonHang', 'P') IS NOT NULL
@@ -212,4 +236,77 @@ BEGIN
     UPDATE DonHang
     SET trang_thai = @trang_thai
     WHERE ma_don_hang = @ma_don_hang;
+END;
+
+---Thêm đánh giá
+IF OBJECT_ID('dbo.ThemDanhGia', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.ThemDanhGia;
+GO
+CREATE PROCEDURE dbo.ThemDanhGia
+    @ma_khach_hang VARCHAR(50),
+    @ma_don_hang VARCHAR(50),
+    @so_sao_danh_gia INT,
+    @ngay_danh_gia DATE,
+    @noi_dung NVARCHAR(255)
+AS
+BEGIN
+    DECLARE @ma_danh_gia VARCHAR(50);
+    DECLARE @trang_thai INT;
+
+    -- Kiểm tra xem khách hàng có đơn hàng hoàn thành không
+    SELECT @trang_thai = trang_thai
+    FROM DonHang
+    WHERE ma_don_hang = @ma_don_hang AND ma_khach_hang = @ma_khach_hang;
+
+    IF @trang_thai IS NULL
+    BEGIN
+        RAISERROR('Bạn không có lịch sử mua sản phẩm này!.', 16, 1);
+        RETURN;
+    END
+
+    IF @trang_thai <> 1 -- Trạng thái 1 là "hoàn thành"
+    BEGIN
+        RAISERROR('Đơn hàng chưa hoàn thành hoặc đã bị hủy, không thể đánh giá.', 16, 1);
+        RETURN;
+    END
+
+    -- Tạo mã đánh giá mới
+    SET @ma_danh_gia = dbo.TaoMaDanhGia();
+
+    -- Thêm đánh giá vào bảng
+    INSERT INTO DanhGia (ma_danh_gia, ma_khach_hang, ma_don_hang, so_sao_danh_gia, ngay_danh_gia, noi_dung)
+    VALUES (@ma_danh_gia, @ma_khach_hang, @ma_don_hang, @so_sao_danh_gia, @ngay_danh_gia, @noi_dung);
+END;
+
+---Sửa đánh giá
+IF OBJECT_ID('dbo.SuaDanhGia', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.SuaDanhGia;
+GO
+CREATE PROCEDURE dbo.SuaDanhGia
+    @ma_danh_gia VARCHAR(50),
+    @so_sao_danh_gia INT,
+    @ngay_danh_gia DATE,
+    @noi_dung NVARCHAR(255)
+AS
+BEGIN
+    -- Cập nhật đánh giá
+    UPDATE DanhGia
+    SET 
+        so_sao_danh_gia = @so_sao_danh_gia,
+        ngay_danh_gia = @ngay_danh_gia,
+        noi_dung = @noi_dung
+    WHERE ma_danh_gia = @ma_danh_gia;
+END;
+
+---xóa đánh giá
+IF OBJECT_ID('dbo.XoaDanhGia', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.XoaDanhGia;
+GO
+CREATE PROCEDURE dbo.XoaDanhGia
+    @ma_danh_gia VARCHAR(50)
+AS
+BEGIN
+    -- Xóa đánh giá
+    DELETE FROM DanhGia
+    WHERE ma_danh_gia = @ma_danh_gia;
 END;
