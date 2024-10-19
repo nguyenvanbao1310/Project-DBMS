@@ -306,7 +306,32 @@ CREATE PROCEDURE dbo.XoaDanhGia
     @ma_danh_gia VARCHAR(50)
 AS
 BEGIN
-    -- Xóa đánh giá
-    DELETE FROM DanhGia
+-- Xóa đánh giá
+DELETE FROM DanhGia
     WHERE ma_danh_gia = @ma_danh_gia;
+END;
+
+---Thêm vào giỏ hàng
+IF OBJECT_ID('dbo.ThemVaoGioHang', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.ThemVaoGioHang;
+GO
+CREATE PROCEDURE dbo.ThemVaoGioHang
+    @ma_khach_hang VARCHAR(50),
+    @ma_may_tinh VARCHAR(50)
+AS
+BEGIN
+    -- Kiểm tra xem sản phẩm đã có trong giỏ hàng của khách hàng chưa
+    IF EXISTS (SELECT 1 FROM GioHang WHERE ma_khach_hang = @ma_khach_hang AND ma_may_tinh = @ma_may_tinh)
+    BEGIN
+        -- Cập nhật số lượng nếu sản phẩm đã có trong giỏ hàng
+        UPDATE GioHang
+        SET so_luong = so_luong + 1
+        WHERE ma_khach_hang = @ma_khach_hang AND ma_may_tinh = @ma_may_tinh;
+    END
+    ELSE
+    BEGIN
+        -- Thêm sản phẩm mới vào giỏ hàng với số lượng là 1
+        INSERT INTO GioHang (ma_khach_hang, ma_may_tinh, so_luong)
+        VALUES (@ma_khach_hang, @ma_may_tinh, 1);
+    END
 END;

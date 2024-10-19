@@ -92,3 +92,10 @@ CREATE TABLE SanPham_KhuyenMai (
     FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh) ON DELETE CASCADE,
     FOREIGN KEY (ma_khuyen_mai) REFERENCES KhuyenMai(ma_khuyen_mai) ON DELETE CASCADE
 );
+
+CREATE TABLE GioHang (
+    ma_khach_hang VARCHAR(50) PRIMARY KEY,
+    ma_may_tinh VARCHAR(50),
+    so_luong INT NOT NULL,
+    FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang) ON DELETE CASCADE
+);
