@@ -335,3 +335,23 @@ BEGIN
         VALUES (@ma_khach_hang, @ma_may_tinh, 1);
     END
 END;
+
+
+IF OBJECT_ID('dbo.TimKiemSanPham', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.TimKiemSanPham;
+GO
+CREATE PROCEDURE dbo.TimKiemSanPham
+    @tu_khoa NVARCHAR(255)
+AS
+BEGIN
+    SELECT ma_may_tinh, ten_may_tinh, mo_ta, gia_tien, ton_kho, cpu, ram, o_cung, card_roi, man_hinh, bao_hanh
+    FROM MayTinh
+    WHERE 
+        ten_may_tinh LIKE '%' + @tu_khoa + '%' OR
+        mo_ta LIKE '%' + @tu_khoa + '%' OR
+        cpu LIKE '%' + @tu_khoa + '%' OR
+        ram LIKE '%' + @tu_khoa + '%' OR
+        o_cung LIKE '%' + @tu_khoa + '%' OR
+        card_roi LIKE '%' + @tu_khoa + '%' OR
+        man_hinh LIKE '%' + @tu_khoa + '%';
+END;

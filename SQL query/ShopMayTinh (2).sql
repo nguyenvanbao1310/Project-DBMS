@@ -94,8 +94,9 @@ CREATE TABLE SanPham_KhuyenMai (
 );
 
 CREATE TABLE GioHang (
-    ma_khach_hang VARCHAR(50) PRIMARY KEY,
+    ma_khach_hang VARCHAR(50),
     ma_may_tinh VARCHAR(50),
     so_luong INT NOT NULL,
+	PRIMARY KEY (ma_khach_hang, ma_may_tinh),
     FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang) ON DELETE CASCADE
 );

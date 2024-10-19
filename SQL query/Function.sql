@@ -136,3 +136,17 @@ BEGIN
 
     RETURN @ma_danh_gia;
 END;
+GO
+---xem chi tiết máy tính
+IF OBJECT_ID('dbo.XemChiTietMayTinh', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.XemChiTietMayTinh;
+GO
+
+CREATE PROCEDURE dbo.XemChiTietMayTinh
+    @ma_san_pham INT
+AS
+BEGIN
+    SELECT ma_may_tinh, ten_may_tinh, mo_ta, gia_tien, ton_kho, cpu, ram, o_cung, card_roi, man_hinh, bao_hanh, hinh_anh
+    FROM MayTinh
+    WHERE ma_may_tinh = @ma_san_pham;
+END;
