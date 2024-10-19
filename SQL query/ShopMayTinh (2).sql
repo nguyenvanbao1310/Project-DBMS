@@ -12,7 +12,7 @@ CREATE TABLE MayTinh (
     cpu NVARCHAR(255) NOT NULL,
     ram NVARCHAR(255) NOT NULL,
     o_cung NVARCHAR(255) NOT NULL,
-    card_roi NVARCHAR(255) NOT NULL,
+    card_roi NVARCHAR(255),
     man_hinh NVARCHAR(255) NOT NULL,
 	trong_luong FLOAT NOT NULL,
 	nam_san_suat INT NOT NUll,
