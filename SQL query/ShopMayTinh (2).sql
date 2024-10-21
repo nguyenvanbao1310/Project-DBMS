@@ -100,3 +100,14 @@ CREATE TABLE GioHang (
 	PRIMARY KEY (ma_khach_hang, ma_may_tinh),
     FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang) ON DELETE CASCADE
 );
+
+CREATE TABLE KhuyenMai_KhachHang (
+    ma_khach_hang VARCHAR(50),
+    ma_khuyen_mai VARCHAR(50),
+    trang_thai INT NOT NULL,
+    PRIMARY KEY (ma_khach_hang, ma_khuyen_mai),
+    FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang) ON DELETE CASCADE,
+    FOREIGN KEY (ma_khuyen_mai) REFERENCES KhuyenMai(ma_khuyen_mai) ON DELETE CASCADE
+);
+
+

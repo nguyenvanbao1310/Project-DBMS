@@ -53,6 +53,7 @@ BEGIN
     INSERT INTO MayTinh (ma_may_tinh, ten_may_tinh, mo_ta, gia_tien, ton_kho, cpu, ram, o_cung, card_roi, man_hinh, trong_luong, nam_san_suat, bao_hanh, hinh_anh)
     VALUES (@ma_may_tinh, @ten_may_tinh, @mo_ta, @gia_tien, @ton_kho, @cpu, @ram, @o_cung, @card_roi, @man_hinh, @trong_luong, @nam_san_suat, @bao_hanh, @hinh_anh);
 END;
+GO
 
 ---Xóa máy tính
 IF OBJECT_ID('dbo.XoaMayTinh', 'P') IS NOT NULL
@@ -69,6 +70,7 @@ BEGIN
         DELETE FROM MayTinh WHERE ma_may_tinh = @ma_may_tinh;
     END
 END;
+GO
 
 ---Sửa máy tính
 IF OBJECT_ID('dbo.SuaMayTinh', 'P') IS NOT NULL
@@ -109,6 +111,7 @@ BEGIN
         hinh_anh = COALESCE(@hinh_anh, hinh_anh)
     WHERE ma_may_tinh = @ma_may_tinh;
 END;
+GO
 
 ---Thêm khuyến mãi
 IF OBJECT_ID('dbo.ThemKhuyenMai', 'P') IS NOT NULL
@@ -132,6 +135,7 @@ BEGIN
     INSERT INTO KhuyenMai (ma_khuyen_mai, ten_khuyen_mai, mo_ta, phan_tram_giam, so_tien_giam, ngay_bat_dau, ngay_ket_thuc)
     VALUES (@ma_khuyen_mai, @ten_khuyen_mai, @mo_ta, @phan_tram_giam, @so_tien_giam, @ngay_bat_dau, @ngay_ket_thuc);
 END;
+GO
 
 ---Xóa khuyến mãi
 IF OBJECT_ID('dbo.XoaKhuyenMai', 'P') IS NOT NULL
@@ -144,6 +148,7 @@ BEGIN
     -- Xóa khuyến mãi
     DELETE FROM KhuyenMai WHERE ma_khuyen_mai = @ma_khuyen_mai;
 END;
+GO 
 
 ---Sửa khuyến mãi
 IF OBJECT_ID('dbo.SuaKhuyenMai', 'P') IS NOT NULL
@@ -170,6 +175,38 @@ BEGIN
         ngay_ket_thuc = COALESCE(@ngay_ket_thuc, ngay_ket_thuc)
     WHERE ma_khuyen_mai = @ma_khuyen_mai;
 END;
+GO
+
+---Thêm khuyến mãi cho các sản phẩm
+IF OBJECT_ID('dbo.ThemKhuyenMaiSanPham', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.ThemKhuyenMaiSanPham;
+GO
+CREATE PROCEDURE dbo.ThemKhuyenMaiSanPham
+(
+    @ma_khuyen_mai VARCHAR(50),
+    @ma_may_tinh VARCHAR(50)
+)
+AS
+BEGIN
+    -- Kiểm tra xem khuyến mãi có tồn tại không
+    IF NOT EXISTS (SELECT 1 FROM KhuyenMai WHERE ma_khuyen_mai = @ma_khuyen_mai)
+    BEGIN
+        RAISERROR('Khuyến mãi không tồn tại.', 16, 1);
+        RETURN;
+    END
+
+    -- Kiểm tra xem sản phẩm có tồn tại không
+    IF NOT EXISTS (SELECT 1 FROM MayTinh WHERE ma_may_tinh = @ma_may_tinh)
+    BEGIN
+        RAISERROR('Sản phẩm không tồn tại.', 16, 1);
+        RETURN;
+    END
+
+    -- Thêm khuyến mãi cho sản phẩm
+    INSERT INTO SanPham_KhuyenMai (ma_may_tinh, ma_khuyen_mai)
+    VALUES (@ma_may_tinh, @ma_khuyen_mai);
+END;
+GO
 
 ---Thêm đơn hàng
 IF OBJECT_ID('dbo.ThemDonHang', 'P') IS NOT NULL
@@ -191,6 +228,7 @@ CREATE PROCEDURE dbo.ThemDonHang
 	INSERT INTO DonHang (ma_don_hang, ma_khach_hang, ngay_dat_hang, tong_tien, trang_thai)
 	VALUES (@ma_don_hang, @ma_khach_hang, @ngay_dat_hang, @tong_tien, @trang_thai);
 END;
+GO
 
 ---thêm đơn hàng chi tiết
 IF OBJECT_ID('dbo.ThemDonHangChiTiet', 'P') IS NOT NULL
@@ -221,7 +259,7 @@ BEGIN
     INSERT INTO DonHangChiTiet (ma_don_hang, ma_may_tinh, gia_ban, so_luong)
     VALUES (@ma_don_hang, @ma_may_tinh, @gia_ban, @so_luong);
 END;
-
+GO
 
 ---Cập nhật trạng thái của đơn hàng 1: hoàn thành, 2: chưa hoàn thành, 3: hủy
 IF OBJECT_ID('dbo.CapNhatTrangThaiDonHang', 'P') IS NOT NULL
@@ -237,6 +275,7 @@ BEGIN
     SET trang_thai = @trang_thai
     WHERE ma_don_hang = @ma_don_hang;
 END;
+GO
 
 ---Thêm đánh giá
 IF OBJECT_ID('dbo.ThemDanhGia', 'P') IS NOT NULL
@@ -277,6 +316,7 @@ BEGIN
     INSERT INTO DanhGia (ma_danh_gia, ma_khach_hang, ma_don_hang, so_sao_danh_gia, ngay_danh_gia, noi_dung)
     VALUES (@ma_danh_gia, @ma_khach_hang, @ma_don_hang, @so_sao_danh_gia, @ngay_danh_gia, @noi_dung);
 END;
+GO
 
 ---Sửa đánh giá
 IF OBJECT_ID('dbo.SuaDanhGia', 'P') IS NOT NULL
@@ -297,6 +337,7 @@ BEGIN
         noi_dung = @noi_dung
     WHERE ma_danh_gia = @ma_danh_gia;
 END;
+GO 
 
 ---xóa đánh giá
 IF OBJECT_ID('dbo.XoaDanhGia', 'P') IS NOT NULL
@@ -310,6 +351,7 @@ BEGIN
 DELETE FROM DanhGia
     WHERE ma_danh_gia = @ma_danh_gia;
 END;
+GO
 
 ---Thêm vào giỏ hàng
 IF OBJECT_ID('dbo.ThemVaoGioHang', 'P') IS NOT NULL
@@ -335,23 +377,17 @@ BEGIN
         VALUES (@ma_khach_hang, @ma_may_tinh, 1);
     END
 END;
-
-
-IF OBJECT_ID('dbo.TimKiemSanPham', 'P') IS NOT NULL
-    DROP PROCEDURE dbo.TimKiemSanPham;
 GO
-CREATE PROCEDURE dbo.TimKiemSanPham
-    @tu_khoa NVARCHAR(255)
+
+---xem chi tiết máy tính
+IF OBJECT_ID('dbo.XemChiTietMayTinh', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.XemChiTietMayTinh;
+GO
+CREATE PROCEDURE dbo.XemChiTietMayTinh
+    @ma_san_pham INT
 AS
 BEGIN
-    SELECT ma_may_tinh, ten_may_tinh, mo_ta, gia_tien, ton_kho, cpu, ram, o_cung, card_roi, man_hinh, bao_hanh
+    SELECT ma_may_tinh, ten_may_tinh, mo_ta, gia_tien, ton_kho, cpu, ram, o_cung, card_roi, man_hinh, bao_hanh, hinh_anh
     FROM MayTinh
-    WHERE 
-        ten_may_tinh LIKE '%' + @tu_khoa + '%' OR
-        mo_ta LIKE '%' + @tu_khoa + '%' OR
-        cpu LIKE '%' + @tu_khoa + '%' OR
-        ram LIKE '%' + @tu_khoa + '%' OR
-        o_cung LIKE '%' + @tu_khoa + '%' OR
-        card_roi LIKE '%' + @tu_khoa + '%' OR
-        man_hinh LIKE '%' + @tu_khoa + '%';
+    WHERE ma_may_tinh = @ma_san_pham;
 END;

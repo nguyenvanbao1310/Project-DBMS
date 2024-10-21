@@ -137,16 +137,133 @@ BEGIN
     RETURN @ma_danh_gia;
 END;
 GO
----xem chi tiết máy tính
-IF OBJECT_ID('dbo.XemChiTietMayTinh', 'P') IS NOT NULL
-    DROP PROCEDURE dbo.XemChiTietMayTinh;
+
+---Tìm kiếm sản phẩm bằng từ khóa
+IF OBJECT_ID('dbo.TimKiemSanPham', 'FN') IS NOT NULL
+    DROP FUNCTION dbo.TimKiemSanPham;
+GO
+CREATE FUNCTION dbo.TimKiemSanPham (
+    @tu_khoa NVARCHAR(255)
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT ma_may_tinh, ten_may_tinh, mo_ta, gia_tien, ton_kho, cpu, ram, o_cung, card_roi, man_hinh, bao_hanh
+    FROM MayTinh
+    WHERE 
+        ten_may_tinh LIKE '%' + @tu_khoa + '%' OR
+        mo_ta LIKE '%' + @tu_khoa + '%' OR
+        cpu LIKE '%' + @tu_khoa + '%' OR
+        ram LIKE '%' + @tu_khoa + '%' OR
+        o_cung LIKE '%' + @tu_khoa + '%' OR
+        card_roi LIKE '%' + @tu_khoa + '%' OR
+        man_hinh LIKE '%' + @tu_khoa + '%'
+);
 GO
 
-CREATE PROCEDURE dbo.XemChiTietMayTinh
-    @ma_san_pham INT
+---Tìm sản phẩm theo giá
+IF OBJECT_ID('dbo.TimKiemSanPhamTheoGia', 'FN') IS NOT NULL
+    DROP FUNCTION dbo.TimKiemSanPhamTheoGia;
+GO
+CREATE FUNCTION dbo.TimKiemSanPhamTheoGia (
+    @GiaMin INT,
+    @GiaMax INT
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT *
+    FROM MayTinh
+    WHERE gia_tien BETWEEN @GiaMin AND @GiaMax
+);
+GO
+
+--- Lấy ra các khuyến mãi của sản phẩm đang chọn mà khách hàng đang có
+IF OBJECT_ID('dbo.LayKhuyenMaiCuaKhachHangVaSanPham', 'FN') IS NOT NULL
+    DROP FUNCTION dbo.LayKhuyenMaiCuaKhachHangVaSanPham;
+GO
+CREATE FUNCTION dbo.LayKhuyenMaiCuaKhachHangVaSanPham
+(
+    @ma_khach_hang VARCHAR(50),
+    @ma_may_tinh VARCHAR(50)
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        km.ma_khuyen_mai,
+        km.ten_khuyen_mai,
+        km.mo_ta,
+        km.phan_tram_giam,
+        km.so_tien_giam,
+        km.ngay_bat_dau,
+        km.ngay_ket_thuc,
+        kmkh.trang_thai
+    FROM 
+        KhuyenMai km
+    JOIN 
+        SanPham_KhuyenMai spkm ON km.ma_khuyen_mai = spkm.ma_khuyen_mai
+    JOIN 
+        KhuyenMai_KhachHang kmkh ON km.ma_khuyen_mai = kmkh.ma_khuyen_mai
+    WHERE 
+        kmkh.ma_khach_hang = @ma_khach_hang
+        AND spkm.ma_may_tinh = @ma_may_tinh
+        AND kmkh.trang_thai = 1 -- Chỉ lấy khuyến mãi chưa được sử dụng
+);
+GO
+
+---Hàm áp dụng khuyến mãi
+IF OBJECT_ID('dbo.ApDungKhuyenMai', 'FN') IS NOT NULL
+    DROP FUNCTION dbo.ApDungKhuyenMai;
+GO
+
+CREATE FUNCTION dbo.ApDungKhuyenMai
+(
+    @ma_may_tinh VARCHAR(50),
+    @ma_khuyen_mai VARCHAR(50)
+)
+RETURNS INT
 AS
 BEGIN
-    SELECT ma_may_tinh, ten_may_tinh, mo_ta, gia_tien, ton_kho, cpu, ram, o_cung, card_roi, man_hinh, bao_hanh, hinh_anh
+    DECLARE @gia_tien INT;
+    DECLARE @so_tien_giam INT;
+    DECLARE @phan_tram_giam FLOAT;
+    DECLARE @tong_tien INT;
+
+    -- Lấy giá tiền của sản phẩm
+    SELECT @gia_tien = gia_tien
     FROM MayTinh
-    WHERE ma_may_tinh = @ma_san_pham;
+    WHERE ma_may_tinh = @ma_may_tinh;
+
+    -- Lấy thông tin khuyến mãi
+    SELECT @so_tien_giam = so_tien_giam, @phan_tram_giam = phan_tram_giam
+    FROM KhuyenMai
+    WHERE ma_khuyen_mai = @ma_khuyen_mai;
+
+    -- Tính toán số tiền sau khi áp dụng khuyến mãi
+    SET @tong_tien = @gia_tien;
+
+    -- Áp dụng khuyến mãi theo phần trăm
+    IF @phan_tram_giam IS NOT NULL
+    BEGIN
+        SET @tong_tien = @tong_tien - (@tong_tien * @phan_tram_giam / 100);
+    END
+
+    -- Áp dụng khuyến mãi theo số tiền
+    IF @so_tien_giam IS NOT NULL
+    BEGIN
+        SET @tong_tien = @tong_tien - @so_tien_giam;
+    END
+
+    -- Đảm bảo số tiền không âm
+    IF @tong_tien < 0
+    BEGIN
+        SET @tong_tien = 0;
+    END
+
+    RETURN @tong_tien;
 END;
+GO
