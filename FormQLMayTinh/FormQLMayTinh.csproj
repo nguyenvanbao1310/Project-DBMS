@@ -55,6 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FApDungKhuyenMaiVaoSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FApDungKhuyenMaiVaoSanPham.Designer.cs">
+      <DependentUpon>FApDungKhuyenMaiVaoSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChinhSuaSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChinhSuaSanPham.Designer.cs">
+      <DependentUpon>FChinhSuaSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="FGiaoDienChuShop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     </Compile>
     <Compile Include="FGioHang.Designer.cs">
       <DependentUpon>FGioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHuyDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHuyDonHang.Designer.cs">
+      <DependentUpon>FHuyDonHang.cs</DependentUpon>
     </Compile>
     <Compile Include="FKhoKhuyenMai.cs">
       <SubType>Form</SubType>
@@ -121,6 +139,36 @@
     <Compile Include="FQuanLyThongTinCaNhan.Designer.cs">
       <DependentUpon>FQuanLyThongTinCaNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FSuDungKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSuDungKhuyenMai.Designer.cs">
+      <DependentUpon>FSuDungKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTaoKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTaoKhuyenMai.Designer.cs">
+      <DependentUpon>FTaoKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThanhToan.Designer.cs">
+      <DependentUpon>FThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemSanPham.Designer.cs">
+      <DependentUpon>FThemSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXemChiTietSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXemChiTietSanPham.Designer.cs">
+      <DependentUpon>FXemChiTietSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="FXemSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +183,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCChiTietDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCChiTietDonHang.Designer.cs">
+      <DependentUpon>UCChiTietDonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCDanhSachSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCDanhSachSanPham.Designer.cs">
       <DependentUpon>UCDanhSachSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCGioHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCGioHang.Designer.cs">
+      <DependentUpon>UCGioHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCHoaDonThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCHoaDonThanhToan.Designer.cs">
+      <DependentUpon>UCHoaDonThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCKhuyenMai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCKhuyenMai.Designer.cs">
+      <DependentUpon>UCKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCLichSuDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLichSuDonHang.Designer.cs">
+      <DependentUpon>UCLichSuDonHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UCQuanLyDonHang.cs">
       <SubType>UserControl</SubType>
@@ -153,6 +231,24 @@
     <Compile Include="UCQuanLyTaiKhoan.Designer.cs">
       <DependentUpon>UCQuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSanPham.Designer.cs">
+      <DependentUpon>UCSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSuDungKhuyenMai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSuDungKhuyenMai.Designer.cs">
+      <DependentUpon>UCSuDungKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FApDungKhuyenMaiVaoSanPham.resx">
+      <DependentUpon>FApDungKhuyenMaiVaoSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChinhSuaSanPham.resx">
+      <DependentUpon>FChinhSuaSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FGiaoDienChuShop.resx">
       <DependentUpon>FGiaoDienChuShop.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FGioHang.resx">
       <DependentUpon>FGioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHuyDonHang.resx">
+      <DependentUpon>FHuyDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FKhoKhuyenMai.resx">
       <DependentUpon>FKhoKhuyenMai.cs</DependentUpon>
@@ -186,6 +285,21 @@
     <EmbeddedResource Include="FQuanLyThongTinCaNhan.resx">
       <DependentUpon>FQuanLyThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FSuDungKhuyenMai.resx">
+      <DependentUpon>FSuDungKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTaoKhuyenMai.resx">
+      <DependentUpon>FTaoKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThanhToan.resx">
+      <DependentUpon>FThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemSanPham.resx">
+      <DependentUpon>FThemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXemChiTietSanPham.resx">
+      <DependentUpon>FXemChiTietSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FXemSanPham.resx">
       <DependentUpon>FXemSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,14 +316,35 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UCChiTietDonHang.resx">
+      <DependentUpon>UCChiTietDonHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCDanhSachSanPham.resx">
       <DependentUpon>UCDanhSachSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCGioHang.resx">
+      <DependentUpon>UCGioHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCHoaDonThanhToan.resx">
+      <DependentUpon>UCHoaDonThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCKhuyenMai.resx">
+      <DependentUpon>UCKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLichSuDonHang.resx">
+      <DependentUpon>UCLichSuDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCQuanLyDonHang.resx">
       <DependentUpon>UCQuanLyDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCQuanLyTaiKhoan.resx">
       <DependentUpon>UCQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSanPham.resx">
+      <DependentUpon>UCSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSuDungKhuyenMai.resx">
+      <DependentUpon>UCSuDungKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
@@ -236,6 +371,8 @@
     <None Include="Resources\backgound.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\U Turn to Left.png" />
+    <None Include="Resources\smartphone-call %282%291.png" />
     <None Include="Resources\refresh %281%29.png" />
     <None Include="Resources\Search.png" />
     <None Include="Resources\user %281%29 11.png" />
@@ -255,6 +392,10 @@
     <None Include="Resources\plus %281%29.png" />
     <None Include="Resources\editing 1.png" />
     <None Include="Resources\delete 1.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\price-tag 1 %281%29.png" />
+    <None Include="Resources\low-price 1 %281%29.png" />
+    <None Include="Resources\add-to-basket 1.png" />
     <Content Include="Resources\profile 1.png" />
     <None Include="Resources\purchase-order 1.png" />
     <None Include="Resources\shopping-cart 1.png" />

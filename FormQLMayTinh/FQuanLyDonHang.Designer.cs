@@ -39,11 +39,11 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblDanhMuc1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cboxLoc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblDonHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblDonHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -78,11 +78,11 @@
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel3.Controls.Add(this.lblDanhMuc);
             this.guna2Panel3.FillColor = System.Drawing.Color.White;
-            this.guna2Panel3.Location = new System.Drawing.Point(1, 163);
+            this.guna2Panel3.Location = new System.Drawing.Point(25, 163);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.guna2Panel3.Size = new System.Drawing.Size(1178, 53);
+            this.guna2Panel3.Size = new System.Drawing.Size(1200, 53);
             this.guna2Panel3.TabIndex = 124;
             // 
             // guna2HtmlLabel6
@@ -192,6 +192,18 @@
             this.cboxLoc.Size = new System.Drawing.Size(167, 36);
             this.cboxLoc.TabIndex = 99;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(1096, 20);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(31, 25);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 2;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // btnTimKiem
             // 
             this.btnTimKiem.BorderRadius = 15;
@@ -237,6 +249,17 @@
             this.txtTimKiem.Size = new System.Drawing.Size(695, 49);
             this.txtTimKiem.TabIndex = 0;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::FormQLMayTinh.Properties.Resources.purchase_order_1;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 24);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(74, 51);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 34;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // lblDonHang
             // 
             this.lblDonHang.AutoSize = false;
@@ -249,34 +272,12 @@
             this.lblDonHang.TabIndex = 33;
             this.lblDonHang.Text = "TẤT CẢ ĐƠN HÀNG";
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(1096, 20);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(31, 25);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 2;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::FormQLMayTinh.Properties.Resources.purchase_order_1;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 24);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(74, 51);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 34;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // flowPanel
             // 
             this.flowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowPanel.Location = new System.Drawing.Point(0, 227);
             this.flowPanel.Name = "flowPanel";
+            this.flowPanel.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
             this.flowPanel.Size = new System.Drawing.Size(1282, 271);
             this.flowPanel.TabIndex = 3;
             // 
@@ -291,6 +292,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FQuanLyDonHang";
             this.Text = "FQuanLyDonHang";
+            this.Load += new System.EventHandler(this.FQuanLyDonHang_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();

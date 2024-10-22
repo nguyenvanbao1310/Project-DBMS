@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.picTimKiem = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.cboxTien = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.picTimKiem = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTimKiem)).BeginInit();
@@ -53,6 +53,21 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1282, 108);
             this.guna2Panel2.TabIndex = 32;
+            // 
+            // picTimKiem
+            // 
+            this.picTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
+            this.picTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picTimKiem.FillColor = System.Drawing.Color.Transparent;
+            this.picTimKiem.Image = global::FormQLMayTinh.Properties.Resources.Search;
+            this.picTimKiem.ImageRotate = 0F;
+            this.picTimKiem.Location = new System.Drawing.Point(1033, 49);
+            this.picTimKiem.Name = "picTimKiem";
+            this.picTimKiem.Size = new System.Drawing.Size(32, 33);
+            this.picTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTimKiem.TabIndex = 51;
+            this.picTimKiem.TabStop = false;
+            this.picTimKiem.Click += new System.EventHandler(this.picTimKiem_Click);
             // 
             // guna2TextBox1
             // 
@@ -143,23 +158,11 @@
             this.txtSearch.Size = new System.Drawing.Size(358, 36);
             this.txtSearch.TabIndex = 41;
             // 
-            // picTimKiem
-            // 
-            this.picTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
-            this.picTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picTimKiem.FillColor = System.Drawing.Color.Transparent;
-            this.picTimKiem.ImageRotate = 0F;
-            this.picTimKiem.Location = new System.Drawing.Point(1033, 49);
-            this.picTimKiem.Name = "picTimKiem";
-            this.picTimKiem.Size = new System.Drawing.Size(32, 33);
-            this.picTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTimKiem.TabIndex = 51;
-            this.picTimKiem.TabStop = false;
-            // 
             // flowPanel
             // 
+            this.flowPanel.AutoScroll = true;
             this.flowPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowPanel.Location = new System.Drawing.Point(0, 114);
+            this.flowPanel.Location = new System.Drawing.Point(0, 108);
             this.flowPanel.Name = "flowPanel";
             this.flowPanel.Size = new System.Drawing.Size(1282, 941);
             this.flowPanel.TabIndex = 33;
@@ -168,13 +171,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.ClientSize = new System.Drawing.Size(1282, 1055);
+            this.ClientSize = new System.Drawing.Size(1303, 1000);
             this.Controls.Add(this.flowPanel);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FXemSanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FXemSanPham";
+            this.Load += new System.EventHandler(this.FXemSanPham_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTimKiem)).EndInit();

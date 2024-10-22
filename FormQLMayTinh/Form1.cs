@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FormQLMayTinh
 {
@@ -15,6 +16,7 @@ namespace FormQLMayTinh
     {
         private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
         SqlConnection sqlcon = null;
+        public static string matk;
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +24,71 @@ namespace FormQLMayTinh
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           
+           bool check= CheckTaiKhoan(txtUserName.Text, txtPassword.Text);
+            if (check)
+            {
+                matk = LayMaNguoiDung(txtUserName.Text, txtPassword.Text);
+                FGiaoDienKhachHang f = new FGiaoDienKhachHang();
+                f.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác");
+            }    
+        }
+
+        private bool CheckTaiKhoan(string username, string password)
+        {
+            sqlcon = new SqlConnection(conStr);
+            using (sqlcon)
+            {
+                try
+                {
+                    sqlcon.Open();
+                    using (SqlCommand cmd = new SqlCommand("CheckTaiKhoan", sqlcon))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@taikhoan", username);
+                        cmd.Parameters.AddWithValue("@matkhau", password);
+
+                        int trangThai = (int)cmd.ExecuteScalar();
+
+                        return trangThai == 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi:" +ex.Message);
+                    return false;
+                }
+            }
+        }
+
+        private string LayMaNguoiDung(string username, string password)
+        {
+            sqlcon = new SqlConnection(conStr);
+            using (sqlcon)
+            {
+                try
+                {
+                    sqlcon.Open();
+                    using (SqlCommand cmd = new SqlCommand("dbo.LayMaNguoiDung", sqlcon))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@tai_khoan", username);
+                        cmd.Parameters.AddWithValue("@mat_khau", password);
+                        return (string)cmd.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi:" + ex.Message);
+                    return null;
+                }
+            }
         }
 
         

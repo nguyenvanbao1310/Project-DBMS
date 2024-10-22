@@ -3,88 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\ucquanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\ucquanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\ucquanlydonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\ucquanlydonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\ucdanhsachsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\ucdanhsachsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\fxemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fxemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\fquanlythongtincanhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fquanlythongtincanhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fquanlysanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fquanlysanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fquanlykhohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fquanlykhohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fquanlydonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fquanlydonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fquanlydanhsachtaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fquanlydanhsachtaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\flichsudonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\flichsudonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fquanlysanpham.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fquanlysanpham.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fquanlysanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fquanlysanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fgiaodienchushop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fgiaodienchushop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fgiaodienkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fgiaodienkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\fgiaodienkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fgiaodienkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fkhokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fkhokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\fkhokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fkhokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\fgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\ftaokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\ftaokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\ftaokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\ftaokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\fxemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fxemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\fxemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fxemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fthemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fthemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\uclichsudonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\uclichsudonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fthemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fthemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|c:\\users\\asus\\source\\repos\\formqlmaytinh\\formqlmaytinh\\fgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\fgiaodienchushop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fgiaodienchushop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\fchinhsuasanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fchinhsuasanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\fquanlydonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fquanlydonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\uckhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\uckhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\formqlmaytinh\\ucdanhsachsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\ucdanhsachsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,8 +82,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FTaoKhuyenMai.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FTaoKhuyenMai.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FTaoKhuyenMai.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FTaoKhuyenMai.cs",
+              "RelativeToolTip": "FormQLMayTinh\\FTaoKhuyenMai.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAAwH8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:48:27.098Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FThemSanPham.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FThemSanPham.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FThemSanPham.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FThemSanPham.cs [Design]",
+              "RelativeToolTip": "FormQLMayTinh\\FThemSanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T17:11:00.708Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FGioHang.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGioHang.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FGioHang.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGioHang.cs",
+              "RelativeToolTip": "FormQLMayTinh\\FGioHang.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T17:11:16.633Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FTaoKhuyenMai.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FTaoKhuyenMai.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FTaoKhuyenMai.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FTaoKhuyenMai.cs [Design]",
+              "RelativeToolTip": "FormQLMayTinh\\FTaoKhuyenMai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T17:15:17.895Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -110,260 +152,173 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FXemSanPham.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FXemSanPham.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FXemSanPham.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FXemSanPham.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FXemSanPham.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T08:14:42.507Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UCDanhSachSanPham.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCDanhSachSanPham.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\UCDanhSachSanPham.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCDanhSachSanPham.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\UCDanhSachSanPham.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:04:13.572Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UCQuanLyDonHang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCQuanLyDonHang.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\UCQuanLyDonHang.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCQuanLyDonHang.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\UCQuanLyDonHang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:05:03.713Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UCQuanLyTaiKhoan.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCQuanLyTaiKhoan.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\UCQuanLyTaiKhoan.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCQuanLyTaiKhoan.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\UCQuanLyTaiKhoan.cs [Design]",
+              "Title": "FKhoKhuyenMai.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "RelativeToolTip": "FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAWwE8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:06:30.64Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FQuanLyThongTinCaNhan.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLyThongTinCaNhan.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLyThongTinCaNhan.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLyThongTinCaNhan.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FQuanLyThongTinCaNhan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T06:12:49.61Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FQuanLySanPham.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLySanPham.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLySanPham.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLySanPham.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FQuanLySanPham.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:49:07.555Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FQuanLyKhoHang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLyKhoHang.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLyKhoHang.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLyKhoHang.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FQuanLyKhoHang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:42:50.971Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FQuanLyDonHang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLyDonHang.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLyDonHang.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLyDonHang.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FQuanLyDonHang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:53:10.709Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FQuanLyDanhSachTaiKhoan.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLyDanhSachTaiKhoan.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLyDanhSachTaiKhoan.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLyDanhSachTaiKhoan.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FQuanLyDanhSachTaiKhoan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:57:32.149Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FLichSuDonHang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FLichSuDonHang.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FLichSuDonHang.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FLichSuDonHang.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FLichSuDonHang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:59:05.964Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FQuanLySanPham.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLySanPham.Designer.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLySanPham.Designer.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLySanPham.Designer.cs",
-              "RelativeToolTip": "FormQLMayTinh\\FQuanLySanPham.Designer.cs",
-              "ViewState": "AQIAAOMAAAAAAAAAAADwv+wAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:51:10.224Z",
+              "WhenOpened": "2024-10-22T17:50:50.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FQuanLySanPham.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLySanPham.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLySanPham.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLySanPham.cs",
-              "RelativeToolTip": "FormQLMayTinh\\FQuanLySanPham.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAABMAAAAIAAAA",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\Program.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\Program.cs",
+              "RelativeToolTip": "FormQLMayTinh\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAhwA8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:50:48.149Z",
+              "WhenOpened": "2024-10-22T16:51:53.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FThanhToan.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FThanhToan.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FThanhToan.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FThanhToan.cs",
+              "RelativeToolTip": "FormQLMayTinh\\FThanhToan.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAkwLcAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T17:40:59.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "FGiaoDienChuShop.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGiaoDienChuShop.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FGiaoDienChuShop.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGiaoDienChuShop.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FGiaoDienChuShop.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:32:51.779Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FGiaoDienKhachHang.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGiaoDienKhachHang.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FGiaoDienKhachHang.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGiaoDienKhachHang.cs",
-              "RelativeToolTip": "FormQLMayTinh\\FGiaoDienKhachHang.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:47:07.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FGiaoDienKhachHang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGiaoDienKhachHang.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FGiaoDienKhachHang.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGiaoDienKhachHang.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FGiaoDienKhachHang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:04:23.108Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\Form1.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\Form1.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\Form1.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T06:10:25.59Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\Form1.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\Form1.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\Form1.cs",
-              "RelativeToolTip": "FormQLMayTinh\\Form1.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAmwBgAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T06:58:44.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "FKhoKhuyenMai.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FKhoKhuyenMai.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FKhoKhuyenMai.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FKhoKhuyenMai.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FKhoKhuyenMai.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:57:40.666Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "FGioHang.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGioHang.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FGioHang.cs",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGioHang.cs [Design]",
               "RelativeToolTip": "FormQLMayTinh\\FGioHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:52:34.995Z",
+              "WhenOpened": "2024-10-22T17:11:15.066Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Nhap.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\Nhap.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\Nhap.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\Nhap.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\Nhap.cs [Design]",
+              "DocumentIndex": 11,
+              "Title": "FThemSanPham.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FThemSanPham.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FThemSanPham.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FThemSanPham.cs",
+              "RelativeToolTip": "FormQLMayTinh\\FThemSanPham.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T06:27:53.927Z",
+              "WhenOpened": "2024-10-22T17:11:06.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FKhoKhuyenMai.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FKhoKhuyenMai.cs [Design]",
+              "RelativeToolTip": "FormQLMayTinh\\FKhoKhuyenMai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:20:34.151Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "app.manifest",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\app.manifest",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\app.manifest",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\app.manifest",
-              "RelativeToolTip": "FormQLMayTinh\\app.manifest",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
-              "WhenOpened": "2024-10-03T07:45:18.168Z",
+              "DocumentIndex": 6,
+              "Title": "FXemSanPham.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FXemSanPham.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FXemSanPham.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FXemSanPham.cs",
+              "RelativeToolTip": "FormQLMayTinh\\FXemSanPham.cs",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAuwKIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T14:26:22.737Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FXemSanPham.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FXemSanPham.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FXemSanPham.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FXemSanPham.cs [Design]",
+              "RelativeToolTip": "FormQLMayTinh\\FXemSanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T10:21:24.145Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FGiaoDienChuShop.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGiaoDienChuShop.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FGiaoDienChuShop.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FGiaoDienChuShop.cs [Design]",
+              "RelativeToolTip": "FormQLMayTinh\\FGiaoDienChuShop.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:32:51.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FChinhSuaSanPham.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FChinhSuaSanPham.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FChinhSuaSanPham.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FChinhSuaSanPham.cs",
+              "RelativeToolTip": "FormQLMayTinh\\FChinhSuaSanPham.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwFUAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:50:36.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UCLichSuDonHang.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCLichSuDonHang.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\UCLichSuDonHang.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCLichSuDonHang.cs",
+              "RelativeToolTip": "FormQLMayTinh\\UCLichSuDonHang.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAcwBwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T07:30:39.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FQuanLyDonHang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLyDonHang.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLyDonHang.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FQuanLyDonHang.cs [Design]",
+              "RelativeToolTip": "FormQLMayTinh\\FQuanLyDonHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T05:52:46.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UCKhuyenMai.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCKhuyenMai.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\UCKhuyenMai.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCKhuyenMai.cs [Design]",
+              "RelativeToolTip": "FormQLMayTinh\\UCKhuyenMai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:20:27.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UCDanhSachSanPham.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCDanhSachSanPham.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\UCDanhSachSanPham.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\UCDanhSachSanPham.cs [Design]",
+              "RelativeToolTip": "FormQLMayTinh\\UCDanhSachSanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T09:41:37.501Z"
             }
           ]
         },

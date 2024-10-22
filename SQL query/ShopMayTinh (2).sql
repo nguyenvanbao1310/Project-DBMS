@@ -34,7 +34,6 @@ CREATE TABLE ChuShop (
     so_dien_thoai VARCHAR(20) UNIQUE,
 	FOREIGN KEY (ma_chu_shop) REFERENCES TaiKhoan(ma_nguoi_dung)
 );
-
 CREATE TABLE KhachHang (
     ma_khach_hang VARCHAR(50) PRIMARY KEY,
     ten_khach_hang NVARCHAR(255) NOT NULL,
@@ -53,7 +52,6 @@ CREATE TABLE KhuyenMai (
     so_tien_giam INT,
     ngay_bat_dau DATE,
     ngay_ket_thuc DATE,
-    trang_thai CHAR(50)
 );
 
 CREATE TABLE DonHang (
@@ -61,6 +59,7 @@ CREATE TABLE DonHang (
     ma_khach_hang VARCHAR(50),
     ngay_dat_hang DATE,
     tong_tien INT,
+	trang_thai INT,
     FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang)
 );
 
@@ -86,9 +85,63 @@ CREATE TABLE DonHangChiTiet (
 );
 
 CREATE TABLE SanPham_KhuyenMai (
-    ma_san_pham VARCHAR(50),
+    ma_may_tinh VARCHAR(50),
     ma_khuyen_mai VARCHAR(50),
-    PRIMARY KEY (ma_san_pham, ma_khuyen_mai),
-    FOREIGN KEY (ma_san_pham) REFERENCES MayTinh(ma_may_tinh),
+    PRIMARY KEY (ma_may_tinh, ma_khuyen_mai),
+    FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh),
     FOREIGN KEY (ma_khuyen_mai) REFERENCES KhuyenMai(ma_khuyen_mai)
 );
+
+CREATE TABLE GioHang (
+    ma_khach_hang VARCHAR(50),
+    ma_may_tinh VARCHAR(50),
+    so_luong INT NOT NULL,
+	PRIMARY KEY (ma_khach_hang, ma_may_tinh),
+    FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang) ON DELETE CASCADE
+);
+
+CREATE TABLE KhuyenMai_KhachHang (
+    ma_khach_hang VARCHAR(50),
+    ma_khuyen_mai VARCHAR(50),
+    trang_thai INT NOT NULL,
+    PRIMARY KEY (ma_khach_hang, ma_khuyen_mai),
+    FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang) ON DELETE CASCADE,
+    FOREIGN KEY (ma_khuyen_mai) REFERENCES KhuyenMai(ma_khuyen_mai) ON DELETE CASCADE
+);
+
+ALTER TABLE ChuShop
+ADD CONSTRAINT FK_ChuShop_TaiKhoan
+FOREIGN KEY (ma_chu_shop) REFERENCES TaiKhoan(ma_nguoi_dung) ON DELETE CASCADE;
+
+ALTER TABLE KhachHang
+ADD CONSTRAINT FK_KhachHang_TaiKhoan
+FOREIGN KEY (ma_khach_hang) REFERENCES TaiKhoan(ma_nguoi_dung) ON DELETE CASCADE;
+
+ALTER TABLE DonHang
+ADD CONSTRAINT FK_DonHang_KhachHang
+FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang) ON DELETE CASCADE;
+
+ALTER TABLE DanhGia
+ADD CONSTRAINT FK_DanhGia_KhachHang
+FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang);
+
+ALTER TABLE DanhGia
+ADD CONSTRAINT FK_DanhGia_DonHang
+FOREIGN KEY (ma_don_hang) REFERENCES DonHang(ma_don_hang) ON DELETE CASCADE;
+
+ALTER TABLE DonHangChiTiet
+ADD CONSTRAINT FK_DonHangChiTiet_DonHang
+FOREIGN KEY (ma_don_hang) REFERENCES DonHang(ma_don_hang) ON DELETE CASCADE;
+
+ALTER TABLE DonHangChiTiet
+ADD CONSTRAINT FK_DonHangChiTiet_MayTinh
+FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh) ON DELETE CASCADE;
+
+ALTER TABLE SanPham_KhuyenMai
+ADD CONSTRAINT FK_SanPhamKhuyenMai_MayTinh
+FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh) ON DELETE CASCADE;
+
+ALTER TABLE SanPham_KhuyenMai
+ADD CONSTRAINT FK_SanPhamKhuyenMai_KhuyenMai
+FOREIGN KEY (ma_khuyen_mai) REFERENCES KhuyenMai(ma_khuyen_mai) ON DELETE CASCADE;
+

@@ -549,6 +549,7 @@
             this.Controls.Add(this.pnlChuyenTiep);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FGiaoDienKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FGiaoDienKhachHang";
             this.pnlChuyenTiep.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);

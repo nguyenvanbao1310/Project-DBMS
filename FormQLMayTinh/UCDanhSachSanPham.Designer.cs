@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblGiaBan = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTinhTrangSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblDanhMuc = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblGiaGoc = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblMaSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblBaoHanh = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTonKho = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.picXoa = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picSua = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblMoTaSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblGiaTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblMaSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picXoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSua)).BeginInit();
@@ -44,16 +44,16 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.lblBaoHanh);
+            this.guna2Panel1.Controls.Add(this.lblTonKho);
             this.guna2Panel1.Controls.Add(this.picXoa);
             this.guna2Panel1.Controls.Add(this.picSua);
-            this.guna2Panel1.Controls.Add(this.lblGiaBan);
-            this.guna2Panel1.Controls.Add(this.lblTinhTrangSP);
-            this.guna2Panel1.Controls.Add(this.lblDanhMuc);
-            this.guna2Panel1.Controls.Add(this.lblGiaGoc);
+            this.guna2Panel1.Controls.Add(this.lblMoTaSP);
+            this.guna2Panel1.Controls.Add(this.lblGiaTien);
             this.guna2Panel1.Controls.Add(this.lblTenSP);
             this.guna2Panel1.Controls.Add(this.lblMaSP);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -63,54 +63,81 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1250, 54);
             this.guna2Panel1.TabIndex = 2;
             // 
-            // lblGiaBan
+            // lblBaoHanh
             // 
-            this.lblGiaBan.BackColor = System.Drawing.Color.Transparent;
-            this.lblGiaBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaBan.ForeColor = System.Drawing.Color.Black;
-            this.lblGiaBan.Location = new System.Drawing.Point(696, 15);
-            this.lblGiaBan.Name = "lblGiaBan";
-            this.lblGiaBan.Size = new System.Drawing.Size(62, 25);
-            this.lblGiaBan.TabIndex = 81;
-            this.lblGiaBan.Text = "Giá bán";
+            this.lblBaoHanh.BackColor = System.Drawing.Color.Transparent;
+            this.lblBaoHanh.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBaoHanh.Location = new System.Drawing.Point(941, 15);
+            this.lblBaoHanh.Name = "lblBaoHanh";
+            this.lblBaoHanh.Size = new System.Drawing.Size(77, 27);
+            this.lblBaoHanh.TabIndex = 85;
+            this.lblBaoHanh.Text = "Bảo hành";
             // 
-            // lblTinhTrangSP
+            // lblTonKho
             // 
-            this.lblTinhTrangSP.BackColor = System.Drawing.Color.Transparent;
-            this.lblTinhTrangSP.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTinhTrangSP.Location = new System.Drawing.Point(870, 13);
-            this.lblTinhTrangSP.Name = "lblTinhTrangSP";
-            this.lblTinhTrangSP.Size = new System.Drawing.Size(166, 27);
-            this.lblTinhTrangSP.TabIndex = 79;
-            this.lblTinhTrangSP.Text = "Tình trạng sản phẩm";
+            this.lblTonKho.BackColor = System.Drawing.Color.Transparent;
+            this.lblTonKho.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTonKho.Location = new System.Drawing.Point(800, 15);
+            this.lblTonKho.Name = "lblTonKho";
+            this.lblTonKho.Size = new System.Drawing.Size(68, 27);
+            this.lblTonKho.TabIndex = 84;
+            this.lblTonKho.Text = "Tồn kho";
             // 
-            // lblDanhMuc
+            // picXoa
             // 
-            this.lblDanhMuc.BackColor = System.Drawing.Color.Transparent;
-            this.lblDanhMuc.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDanhMuc.Location = new System.Drawing.Point(34, 12);
-            this.lblDanhMuc.Name = "lblDanhMuc";
-            this.lblDanhMuc.Size = new System.Drawing.Size(84, 27);
-            this.lblDanhMuc.TabIndex = 77;
-            this.lblDanhMuc.Text = "Danh mục";
+            this.picXoa.BackColor = System.Drawing.Color.Transparent;
+            this.picXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picXoa.Image = global::FormQLMayTinh.Properties.Resources.delete_1;
+            this.picXoa.ImageRotate = 0F;
+            this.picXoa.Location = new System.Drawing.Point(1200, 15);
+            this.picXoa.Name = "picXoa";
+            this.picXoa.Size = new System.Drawing.Size(32, 25);
+            this.picXoa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picXoa.TabIndex = 83;
+            this.picXoa.TabStop = false;
+            this.picXoa.Click += new System.EventHandler(this.picXoa_Click);
             // 
-            // lblGiaGoc
+            // picSua
             // 
-            this.lblGiaGoc.BackColor = System.Drawing.Color.Transparent;
-            this.lblGiaGoc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaGoc.ForeColor = System.Drawing.Color.Black;
-            this.lblGiaGoc.Location = new System.Drawing.Point(528, 15);
-            this.lblGiaGoc.Name = "lblGiaGoc";
-            this.lblGiaGoc.Size = new System.Drawing.Size(61, 25);
-            this.lblGiaGoc.TabIndex = 2;
-            this.lblGiaGoc.Text = "Giá gốc";
+            this.picSua.BackColor = System.Drawing.Color.Transparent;
+            this.picSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSua.Image = global::FormQLMayTinh.Properties.Resources.editing_1;
+            this.picSua.ImageRotate = 0F;
+            this.picSua.Location = new System.Drawing.Point(1125, 15);
+            this.picSua.Name = "picSua";
+            this.picSua.Size = new System.Drawing.Size(32, 25);
+            this.picSua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSua.TabIndex = 82;
+            this.picSua.TabStop = false;
+            this.picSua.Click += new System.EventHandler(this.picSua_Click);
+            // 
+            // lblMoTaSP
+            // 
+            this.lblMoTaSP.BackColor = System.Drawing.Color.Transparent;
+            this.lblMoTaSP.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoTaSP.Location = new System.Drawing.Point(534, 13);
+            this.lblMoTaSP.Name = "lblMoTaSP";
+            this.lblMoTaSP.Size = new System.Drawing.Size(133, 27);
+            this.lblMoTaSP.TabIndex = 79;
+            this.lblMoTaSP.Text = "Mô tả sản phẩm";
+            // 
+            // lblGiaTien
+            // 
+            this.lblGiaTien.BackColor = System.Drawing.Color.Transparent;
+            this.lblGiaTien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaTien.ForeColor = System.Drawing.Color.Black;
+            this.lblGiaTien.Location = new System.Drawing.Point(370, 15);
+            this.lblGiaTien.Name = "lblGiaTien";
+            this.lblGiaTien.Size = new System.Drawing.Size(62, 25);
+            this.lblGiaTien.TabIndex = 2;
+            this.lblGiaTien.Text = "Giá tiền";
             // 
             // lblTenSP
             // 
             this.lblTenSP.BackColor = System.Drawing.Color.Transparent;
             this.lblTenSP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.Black;
-            this.lblTenSP.Location = new System.Drawing.Point(338, 15);
+            this.lblTenSP.Location = new System.Drawing.Point(138, 15);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(111, 25);
             this.lblTenSP.TabIndex = 1;
@@ -121,37 +148,11 @@
             this.lblMaSP.BackColor = System.Drawing.Color.Transparent;
             this.lblMaSP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaSP.ForeColor = System.Drawing.Color.Black;
-            this.lblMaSP.Location = new System.Drawing.Point(192, 15);
+            this.lblMaSP.Location = new System.Drawing.Point(26, 15);
             this.lblMaSP.Name = "lblMaSP";
             this.lblMaSP.Size = new System.Drawing.Size(46, 25);
             this.lblMaSP.TabIndex = 0;
             this.lblMaSP.Text = "MaSP";
-            // 
-            // picXoa
-            // 
-            this.picXoa.BackColor = System.Drawing.Color.Transparent;
-            this.picXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picXoa.Image = global::FormQLMayTinh.Properties.Resources.delete_1;
-            this.picXoa.ImageRotate = 0F;
-            this.picXoa.Location = new System.Drawing.Point(1204, 11);
-            this.picXoa.Name = "picXoa";
-            this.picXoa.Size = new System.Drawing.Size(32, 25);
-            this.picXoa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picXoa.TabIndex = 83;
-            this.picXoa.TabStop = false;
-            // 
-            // picSua
-            // 
-            this.picSua.BackColor = System.Drawing.Color.Transparent;
-            this.picSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSua.Image = global::FormQLMayTinh.Properties.Resources.editing_1;
-            this.picSua.ImageRotate = 0F;
-            this.picSua.Location = new System.Drawing.Point(1132, 11);
-            this.picSua.Name = "picSua";
-            this.picSua.Size = new System.Drawing.Size(32, 25);
-            this.picSua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSua.TabIndex = 82;
-            this.picSua.TabStop = false;
             // 
             // UCDanhSachSanPham
             // 
@@ -160,6 +161,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UCDanhSachSanPham";
             this.Size = new System.Drawing.Size(1250, 54);
+            this.Load += new System.EventHandler(this.UCDanhSachSanPham_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picXoa)).EndInit();
@@ -173,11 +175,11 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public Guna.UI2.WinForms.Guna2PictureBox picXoa;
         public Guna.UI2.WinForms.Guna2PictureBox picSua;
-        public Guna.UI2.WinForms.Guna2HtmlLabel lblGiaBan;
-        public Guna.UI2.WinForms.Guna2HtmlLabel lblTinhTrangSP;
-        public Guna.UI2.WinForms.Guna2HtmlLabel lblDanhMuc;
-        public Guna.UI2.WinForms.Guna2HtmlLabel lblGiaGoc;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblMoTaSP;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblGiaTien;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblTenSP;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblMaSP;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblTonKho;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblBaoHanh;
     }
 }

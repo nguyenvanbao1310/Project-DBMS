@@ -49,7 +49,7 @@ namespace FormQLMayTinh
 
         private void btnKhoVouCher_Click(object sender, EventArgs e)
         {
-            FKhoKhuyenMai f = new FKhoKhuyenMai();
+           FSuDungKhuyenMai f = new FSuDungKhuyenMai();
             OpenForm(f);
         }
 

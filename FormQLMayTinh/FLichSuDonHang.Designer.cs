@@ -226,6 +226,7 @@
             this.btnXacNhan.Size = new System.Drawing.Size(258, 65);
             this.btnXacNhan.TabIndex = 141;
             this.btnXacNhan.Text = "MUA LẠI ĐƠN HÀNG";
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // txtNgayDat
             // 
@@ -510,9 +511,9 @@
             this.guna2Panel6.Controls.Add(this.flowPanel1);
             this.guna2Panel6.Controls.Add(this.guna2Panel7);
             this.guna2Panel6.FillColor = System.Drawing.Color.White;
-            this.guna2Panel6.Location = new System.Drawing.Point(58, 44);
+            this.guna2Panel6.Location = new System.Drawing.Point(35, 44);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(511, 397);
+            this.guna2Panel6.Size = new System.Drawing.Size(547, 397);
             this.guna2Panel6.TabIndex = 0;
             // 
             // flowPanel1
@@ -521,7 +522,7 @@
             this.flowPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowPanel1.Location = new System.Drawing.Point(0, 78);
             this.flowPanel1.Name = "flowPanel1";
-            this.flowPanel1.Size = new System.Drawing.Size(511, 319);
+            this.flowPanel1.Size = new System.Drawing.Size(547, 319);
             this.flowPanel1.TabIndex = 84;
             // 
             // guna2Panel7
@@ -534,7 +535,7 @@
             this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel7.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(511, 78);
+            this.guna2Panel7.Size = new System.Drawing.Size(547, 78);
             this.guna2Panel7.TabIndex = 83;
             // 
             // guna2HtmlLabel5
@@ -544,9 +545,9 @@
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(17, 14);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(116, 27);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(117, 27);
             this.guna2HtmlLabel5.TabIndex = 79;
-            this.guna2HtmlLabel5.Text = "Mã đơn hàng";
+            this.guna2HtmlLabel5.Text = "Mã sản phẩm";
             // 
             // guna2HtmlLabel7
             // 
@@ -648,9 +649,9 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(130, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(147, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(129, 27);
             this.guna2HtmlLabel1.TabIndex = 80;
-            this.guna2HtmlLabel1.Text = "Ngày thanh toán";
+            this.guna2HtmlLabel1.Text = "Ngày đặt hàng";
             // 
             // lblHoaDon
             // 
@@ -659,9 +660,9 @@
             this.lblHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
             this.lblHoaDon.Location = new System.Drawing.Point(13, 12);
             this.lblHoaDon.Name = "lblHoaDon";
-            this.lblHoaDon.Size = new System.Drawing.Size(90, 27);
+            this.lblHoaDon.Size = new System.Drawing.Size(103, 27);
             this.lblHoaDon.TabIndex = 79;
-            this.lblHoaDon.Text = "HÓA ĐƠN";
+            this.lblHoaDon.Text = "ĐƠN HÀNG";
             // 
             // txtTimKiem
             // 
@@ -745,6 +746,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLichSuDonHang";
             this.Text = "FLichSuDonHang";
+            this.Load += new System.EventHandler(this.FLichSuDonHang_Load);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);

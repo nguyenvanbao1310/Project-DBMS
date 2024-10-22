@@ -32,7 +32,7 @@
             this.lblMaDH = new System.Windows.Forms.LinkLabel();
             this.lblTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblNgayTaoDon = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblNgayDatHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTenKhachHang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblMaKH = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
@@ -46,14 +46,14 @@
             this.guna2Panel1.Controls.Add(this.lblMaDH);
             this.guna2Panel1.Controls.Add(this.lblTrangThai);
             this.guna2Panel1.Controls.Add(this.lblTien);
-            this.guna2Panel1.Controls.Add(this.lblNgayTaoDon);
+            this.guna2Panel1.Controls.Add(this.lblNgayDatHang);
             this.guna2Panel1.Controls.Add(this.lblTenKhachHang);
             this.guna2Panel1.Controls.Add(this.lblMaKH);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1255, 54);
+            this.guna2Panel1.Size = new System.Drawing.Size(1200, 54);
             this.guna2Panel1.TabIndex = 1;
             // 
             // lblMaDH
@@ -75,7 +75,7 @@
             this.lblTrangThai.BackColor = System.Drawing.Color.Transparent;
             this.lblTrangThai.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrangThai.ForeColor = System.Drawing.Color.White;
-            this.lblTrangThai.Location = new System.Drawing.Point(1052, 15);
+            this.lblTrangThai.Location = new System.Drawing.Point(1022, 13);
             this.lblTrangThai.Name = "lblTrangThai";
             this.lblTrangThai.Size = new System.Drawing.Size(164, 27);
             this.lblTrangThai.TabIndex = 108;
@@ -86,29 +86,29 @@
             this.lblTien.BackColor = System.Drawing.Color.Transparent;
             this.lblTien.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTien.ForeColor = System.Drawing.Color.White;
-            this.lblTien.Location = new System.Drawing.Point(882, 15);
+            this.lblTien.Location = new System.Drawing.Point(819, 15);
             this.lblTien.Name = "lblTien";
             this.lblTien.Size = new System.Drawing.Size(78, 27);
             this.lblTien.TabIndex = 107;
             this.lblTien.Text = "Tổng tiền";
             // 
-            // lblNgayTaoDon
+            // lblNgayDatHang
             // 
-            this.lblNgayTaoDon.BackColor = System.Drawing.Color.Transparent;
-            this.lblNgayTaoDon.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayTaoDon.ForeColor = System.Drawing.Color.White;
-            this.lblNgayTaoDon.Location = new System.Drawing.Point(667, 15);
-            this.lblNgayTaoDon.Name = "lblNgayTaoDon";
-            this.lblNgayTaoDon.Size = new System.Drawing.Size(113, 27);
-            this.lblNgayTaoDon.TabIndex = 106;
-            this.lblNgayTaoDon.Text = "Ngày tạo đơn ";
+            this.lblNgayDatHang.BackColor = System.Drawing.Color.Transparent;
+            this.lblNgayDatHang.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayDatHang.ForeColor = System.Drawing.Color.White;
+            this.lblNgayDatHang.Location = new System.Drawing.Point(616, 15);
+            this.lblNgayDatHang.Name = "lblNgayDatHang";
+            this.lblNgayDatHang.Size = new System.Drawing.Size(121, 27);
+            this.lblNgayDatHang.TabIndex = 106;
+            this.lblNgayDatHang.Text = "Ngày đặt hàng";
             // 
             // lblTenKhachHang
             // 
             this.lblTenKhachHang.BackColor = System.Drawing.Color.Transparent;
             this.lblTenKhachHang.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenKhachHang.ForeColor = System.Drawing.Color.White;
-            this.lblTenKhachHang.Location = new System.Drawing.Point(458, 15);
+            this.lblTenKhachHang.Location = new System.Drawing.Point(407, 15);
             this.lblTenKhachHang.Name = "lblTenKhachHang";
             this.lblTenKhachHang.Size = new System.Drawing.Size(127, 27);
             this.lblTenKhachHang.TabIndex = 104;
@@ -131,7 +131,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UCQuanLyDonHang";
-            this.Size = new System.Drawing.Size(1255, 54);
+            this.Size = new System.Drawing.Size(1200, 54);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -144,7 +144,7 @@
         public System.Windows.Forms.LinkLabel lblMaDH;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblTrangThai;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblTien;
-        public Guna.UI2.WinForms.Guna2HtmlLabel lblNgayTaoDon;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblNgayDatHang;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblTenKhachHang;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblMaKH;
     }

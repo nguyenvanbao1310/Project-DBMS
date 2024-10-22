@@ -97,3 +97,53 @@ UPDATE MayTinh SET hinh_anh = @ImageData WHERE ma_may_tinh = N'MT09';
 SELECT @ImageData = BulkColumn
 FROM OPENROWSET(BULK 'D:\DBMS\MayTinhPic\MT10.jpg', SINGLE_BLOB) AS Image;
 UPDATE MayTinh SET hinh_anh = @ImageData WHERE ma_may_tinh = N'MT10';
+
+INSERT INTO DonHangChiTiet (ma_don_hang, ma_may_tinh, gia_ban, so_luong) 
+VALUES 
+('dh0001', 'MT01', 29000000, 1),
+('dh0001', 'MT02', 35000000, 1),
+('dh0002', 'MT03', 32000000, 1),
+('dh0003', 'MT01', 29000000, 1),
+('dh0003', 'MT04', 40000000, 1),
+('dh0004', 'MT05', 15000000, 1),
+('dh0005', 'MT01', 29000000, 1),
+('dh0005', 'MT06', 29000000, 1);
+
+INSERT INTO DonHang (ma_don_hang, ma_khach_hang, ngay_dat_hang, tong_tien, trang_thai) 
+VALUES 
+('dh0001', 'kh0001', '2024-10-01', 64000000, 1),
+('dh0002', 'kh0002', '2024-10-02', 32000000, 1),
+('dh0003', 'kh0003', '2024-10-03', 69000000, 2),
+('dh0004', 'kh0004', '2024-10-04', 15000000,2),
+('dh0005', 'kh0005', '2024-10-05', 58000000,3);
+
+
+INSERT INTO KhuyenMai (ma_khuyen_mai, ten_khuyen_mai, mo_ta, phan_tram_giam, so_tien_giam, ngay_bat_dau, ngay_ket_thuc)
+VALUES 
+('KM01', N'Giảm giá cuối năm', N'Giảm 15% trong tháng 12.', 15, NULL, '2024-12-01', '2024-12-31'),
+('KM02', N'Giảm giá học sinh, sinh viên', N'Giảm 10% cho học sinh, sinh viên khi mua máy tính.', 10, NULL, '2024-09-01', '2024-12-31'),
+('KM03', N'Giảm giá mùa hè', N'Giảm 20% cho mùa hè.', 20, NULL, '2024-06-01', '2024-11-23');
+
+
+INSERT INTO SanPham_KhuyenMai (ma_may_tinh, ma_khuyen_mai)
+VALUES 
+('MT01', 'KM01'),
+('MT01', 'KM03'),
+('MT02', 'KM01'),
+('MT03', 'KM02'),
+('MT04', 'KM03'),
+('MT05', 'KM01'),
+('MT06', 'KM03'),
+('MT07', 'KM02');
+
+
+
+INSERT INTO GioHang(ma_khach_hang, ma_may_tinh, so_luong)
+VALUES ('kh0001','MT07',1),
+		('kh0001','MT05',2)
+
+INSERT INTO KhuyenMai_KhachHang(ma_khach_hang, ma_khuyen_mai, trang_thai)
+VALUES	('kh0001','KM01',1),
+		('kh0001','KM02',1),
+		('kh0001','KM03',1)
+
