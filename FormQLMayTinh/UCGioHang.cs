@@ -37,7 +37,7 @@ namespace FormQLMayTinh
 
         private void UCGioHang_Load(object sender, EventArgs e)
         {
-            lblTenSP.Text = TruncateText(lblTenSP.Text, 15);
+            lblTenSP.Text = TruncateText(lblTenSP.Text, 10);
         }
     }
 }

@@ -57,8 +57,10 @@ namespace FormQLMayTinh
                 uc.lblMaKhuyenMai.Text = dr["ma_khuyen_mai"].ToString();
                 uc.lblTenKhuyenMai.Text = dr["ten_khuyen_mai"].ToString();
                 uc.lblMoTa.Text = dr["mo_ta"].ToString();
-                uc.lblNgayBatDau.Text = Convert.ToDateTime(dr["ngay_bat_dau"]).ToString("dd/MM/yyyy");
-                uc.lblNgayKetThuc.Text = Convert.ToDateTime(dr["ngay_ket_thuc"]).ToString("dd/MM/yyyy");
+                uc.lblNgayBatDau.Text = Convert.ToDateTime(dr["ngay_bat_dau"]).ToString("MM/dd/yyyy");
+                uc.lblNgayKetThuc.Text = Convert.ToDateTime(dr["ngay_ket_thuc"]).ToString("MM/dd/yyyy");
+                uc.hiddenMoTa.Text = dr["mo_ta"].ToString();
+                uc.CancelButtonClicked += XemChiTiet;
                 if (dr["phan_tram_giam"] == DBNull.Value)
                 {
                     uc.lblPhanTramGiam.Text = "Không có";
@@ -95,6 +97,17 @@ namespace FormQLMayTinh
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             FKhoKhuyenMai_Load(sender, e);
+        }
+
+        private void XemChiTiet(object sender, EventArgs e)
+        {
+            var ls = sender as UCKhuyenMai;
+            if (ls != null)
+            {
+                
+                FSuaKhuyenMai f = new FSuaKhuyenMai(ls);
+                f.ShowDialog();
+            }
         }
     }
 }

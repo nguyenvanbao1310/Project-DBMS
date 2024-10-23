@@ -50,6 +50,7 @@ namespace FormQLMayTinh
 
         private void FGioHang_Load(object sender, EventArgs e)
         {
+            btnXemDanhGia.Enabled = false;
             DataTable dt = LoadDuLieu();
             flowPanel.Controls.Clear();
             foreach (DataRow dr in dt.Rows)
@@ -59,7 +60,7 @@ namespace FormQLMayTinh
                 uc.lblTenSP.Text= dr["ten_may_tinh"].ToString() ;
                 uc.lblGiaTien.Text = dr["gia_tien"].ToString();
                 uc.lblSoLuong.Text = dr["so_luong"].ToString();
-                uc.Margin = new Padding(10);
+                uc.Margin = new Padding(20);
                 uc.CancelButtonClicked += XemSanPham;
                 flowPanel.Controls.Add(uc);
             }
@@ -67,12 +68,14 @@ namespace FormQLMayTinh
 
         private void XemSanPham(object sender, EventArgs e)
         {
+            btnXemDanhGia.Enabled = true;
             var ls = sender as UCGioHang;
             if (ls != null)
             {
                 DataTable dt = LoadDuLieuChiTiet(ls.lblMaSP.Text);
                 foreach(DataRow dr in dt.Rows)
                 {
+                    txtMaMayTinh.Text = dr["ma_may_tinh"].ToString();
                     txtTenMayTinh.Text = dr["ten_may_tinh"].ToString();
                     txtCPU.Text = dr["cpu"].ToString();
                     txtRAM.Text = dr["ram"].ToString();
@@ -155,6 +158,12 @@ namespace FormQLMayTinh
                 }
             }
             FThanhToan f = new FThanhToan(dt);
+            f.ShowDialog();
+        }
+
+        private void btnXemDanhGia_Click(object sender, EventArgs e)
+        {
+            FDanhGia f = new FDanhGia(txtMaMayTinh.Text);
             f.ShowDialog();
         }
     }

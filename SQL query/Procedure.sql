@@ -210,6 +210,45 @@ BEGIN
 END;
 GO
 
+--- Xem các sản phẩm được áp dụng với mỗi khuyến mãi
+IF OBJECT_ID('dbo.XemSanPhamApDungVoiMoiKhuyenMai', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.XemSanPhamApDungVoiMoiKhuyenMai;
+GO
+CREATE PROCEDURE dbo.XemSanPhamApDungVoiMoiKhuyenMai
+(
+    @ma_khuyen_mai VARCHAR(50)
+)
+AS
+BEGIN
+	SELECT *
+	FROM View_SanPhamKhuyenMai
+	WHERE View_SanPhamKhuyenMai.ma_khuyen_mai = @ma_khuyen_mai
+END;
+
+
+--- Xóa SanPham_KhuyenMai
+IF OBJECT_ID('dbo.XoaSanPham_KhuyenMai', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.XoaSanPham_KhuyenMai;
+GO
+CREATE PROCEDURE dbo.XoaSanPham_KhuyenMai
+(
+    @ma_khuyen_mai VARCHAR(50),
+	@ma_may_tinh varchar(50)
+)
+AS
+BEGIN
+	DELETE FROM SanPham_KhuyenMai
+	WHERE SanPham_KhuyenMai.ma_khuyen_mai = @ma_khuyen_mai AND SanPham_KhuyenMai.ma_may_tinh = @ma_may_tinh
+END;
+
+
+
+
+
+
+
+
+
 
 
 --- Thêm đơn hàng

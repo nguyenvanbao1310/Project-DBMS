@@ -147,3 +147,5 @@ VALUES	('kh0001','KM01',1),
 		('kh0001','KM02',1),
 		('kh0001','KM03',1)
 
+SELECT *FROM KhuyenMai
+

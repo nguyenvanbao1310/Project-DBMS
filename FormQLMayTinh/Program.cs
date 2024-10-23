@@ -16,7 +16,7 @@ namespace FormQLMayTinh
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FGiaoDienChuShop());
+            Application.Run(new Form1());
         }
     }
 }

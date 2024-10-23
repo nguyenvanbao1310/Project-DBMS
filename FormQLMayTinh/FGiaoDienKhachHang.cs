@@ -64,5 +64,12 @@ namespace FormQLMayTinh
             FXemSanPham f = new FXemSanPham();
             OpenForm(f);
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
+        }
     }
 }

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblNgayKetThuc = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblMaKhuyenMai = new System.Windows.Forms.LinkLabel();
             this.lblNgayBatDau = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSoTienGiam = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblPhanTramGiam = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblMoTa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTenKhuyenMai = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblNgayKetThuc = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,17 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1200, 54);
             this.guna2Panel1.TabIndex = 2;
             // 
+            // lblNgayKetThuc
+            // 
+            this.lblNgayKetThuc.BackColor = System.Drawing.Color.Transparent;
+            this.lblNgayKetThuc.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayKetThuc.ForeColor = System.Drawing.Color.Black;
+            this.lblNgayKetThuc.Location = new System.Drawing.Point(1065, 15);
+            this.lblNgayKetThuc.Name = "lblNgayKetThuc";
+            this.lblNgayKetThuc.Size = new System.Drawing.Size(113, 27);
+            this.lblNgayKetThuc.TabIndex = 111;
+            this.lblNgayKetThuc.Text = "Ngày kết thúc";
+            // 
             // lblMaKhuyenMai
             // 
             this.lblMaKhuyenMai.AutoSize = true;
@@ -71,6 +82,7 @@
             this.lblMaKhuyenMai.TabIndex = 110;
             this.lblMaKhuyenMai.TabStop = true;
             this.lblMaKhuyenMai.Text = "Mã khuyến mãi";
+            this.lblMaKhuyenMai.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblMaKhuyenMai_LinkClicked);
             // 
             // lblNgayBatDau
             // 
@@ -126,17 +138,6 @@
             this.lblTenKhuyenMai.Size = new System.Drawing.Size(127, 27);
             this.lblTenKhuyenMai.TabIndex = 103;
             this.lblTenKhuyenMai.Text = "Tên khuyến mãi";
-            // 
-            // lblNgayKetThuc
-            // 
-            this.lblNgayKetThuc.BackColor = System.Drawing.Color.Transparent;
-            this.lblNgayKetThuc.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayKetThuc.ForeColor = System.Drawing.Color.Black;
-            this.lblNgayKetThuc.Location = new System.Drawing.Point(1065, 15);
-            this.lblNgayKetThuc.Name = "lblNgayKetThuc";
-            this.lblNgayKetThuc.Size = new System.Drawing.Size(113, 27);
-            this.lblNgayKetThuc.TabIndex = 111;
-            this.lblNgayKetThuc.Text = "Ngày kết thúc";
             // 
             // UCKhuyenMai
             // 

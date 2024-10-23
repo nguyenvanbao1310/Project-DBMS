@@ -30,16 +30,21 @@
         {
             this.pnlThanh = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnKhuyenMai = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnDonHang = new Guna.UI2.WinForms.Guna2Button();
             this.pnlCaiDat = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnTinNhan = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnTaiKhoan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnCaiDat = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlSanPham = new System.Windows.Forms.Panel();
             this.btnDSSP = new Guna.UI2.WinForms.Guna2Button();
             this.btnDanhSachSP = new Guna.UI2.WinForms.Guna2Button();
@@ -47,28 +52,20 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlManHinh = new System.Windows.Forms.Panel();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlThanh.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            this.guna2Panel5.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.pnlCaiDat.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.pnlSanPham.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
+            this.pnlCaiDat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.pnlSanPham.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlThanh
@@ -97,10 +94,21 @@
             this.guna2Panel3.Controls.Add(this.guna2PictureBox6);
             this.guna2Panel3.Controls.Add(this.btnDangXuat);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 517);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 458);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(215, 62);
             this.guna2Panel3.TabIndex = 17;
+            // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.Image = global::FormQLMayTinh.Properties.Resources.log_out;
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(16, 11);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(29, 33);
+            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox6.TabIndex = 29;
+            this.guna2PictureBox6.TabStop = false;
             // 
             // btnDangXuat
             // 
@@ -118,16 +126,28 @@
             this.btnDangXuat.Size = new System.Drawing.Size(215, 55);
             this.btnDangXuat.TabIndex = 26;
             this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // guna2Panel5
             // 
             this.guna2Panel5.Controls.Add(this.guna2PictureBox7);
             this.guna2Panel5.Controls.Add(this.btnKhuyenMai);
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 455);
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 396);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(215, 62);
             this.guna2Panel5.TabIndex = 16;
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.Image = global::FormQLMayTinh.Properties.Resources.garage;
+            this.guna2PictureBox7.ImageRotate = 0F;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(16, 10);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.Size = new System.Drawing.Size(29, 33);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox7.TabIndex = 31;
+            this.guna2PictureBox7.TabStop = false;
             // 
             // btnKhuyenMai
             // 
@@ -152,10 +172,21 @@
             this.panel1.Controls.Add(this.guna2PictureBox5);
             this.panel1.Controls.Add(this.btnDonHang);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 393);
+            this.panel1.Location = new System.Drawing.Point(0, 334);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 62);
             this.panel1.TabIndex = 14;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.Image = global::FormQLMayTinh.Properties.Resources.apps_sort__1_;
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(16, 11);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(29, 33);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 26;
+            this.guna2PictureBox5.TabStop = false;
             // 
             // btnDonHang
             // 
@@ -177,31 +208,24 @@
             // 
             // pnlCaiDat
             // 
-            this.pnlCaiDat.Controls.Add(this.guna2PictureBox8);
             this.pnlCaiDat.Controls.Add(this.guna2PictureBox1);
-            this.pnlCaiDat.Controls.Add(this.btnTinNhan);
             this.pnlCaiDat.Controls.Add(this.btnTaiKhoan);
             this.pnlCaiDat.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCaiDat.Location = new System.Drawing.Point(0, 272);
             this.pnlCaiDat.Name = "pnlCaiDat";
-            this.pnlCaiDat.Size = new System.Drawing.Size(215, 121);
+            this.pnlCaiDat.Size = new System.Drawing.Size(215, 62);
             this.pnlCaiDat.TabIndex = 13;
             // 
-            // btnTinNhan
+            // guna2PictureBox1
             // 
-            this.btnTinNhan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTinNhan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTinNhan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTinNhan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTinNhan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTinNhan.FillColor = System.Drawing.Color.Transparent;
-            this.btnTinNhan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTinNhan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTinNhan.Location = new System.Drawing.Point(0, 55);
-            this.btnTinNhan.Name = "btnTinNhan";
-            this.btnTinNhan.Size = new System.Drawing.Size(215, 55);
-            this.btnTinNhan.TabIndex = 32;
-            this.btnTinNhan.Text = "Tin nhắn";
+            this.guna2PictureBox1.Image = global::FormQLMayTinh.Properties.Resources.user__1__11;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(33, 12);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(29, 33);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 35;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // btnTaiKhoan
             // 
@@ -230,6 +254,17 @@
             this.guna2Panel1.Size = new System.Drawing.Size(215, 62);
             this.guna2Panel1.TabIndex = 12;
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::FormQLMayTinh.Properties.Resources.settings;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(16, 15);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(29, 33);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 34;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // btnCaiDat
             // 
             this.btnCaiDat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -247,6 +282,17 @@
             this.btnCaiDat.TabIndex = 32;
             this.btnCaiDat.Text = "Cài đặt";
             this.btnCaiDat.Click += new System.EventHandler(this.btnCaiDat_Click);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::FormQLMayTinh.Properties.Resources.box_open_full;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(16, 112);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(29, 33);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 11;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // pnlSanPham
             // 
@@ -340,83 +386,6 @@
             this.pnlManHinh.Size = new System.Drawing.Size(1352, 976);
             this.pnlManHinh.TabIndex = 3;
             // 
-            // guna2PictureBox6
-            // 
-            this.guna2PictureBox6.Image = global::FormQLMayTinh.Properties.Resources.log_out;
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(16, 11);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(29, 33);
-            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox6.TabIndex = 29;
-            this.guna2PictureBox6.TabStop = false;
-            // 
-            // guna2PictureBox7
-            // 
-            this.guna2PictureBox7.Image = global::FormQLMayTinh.Properties.Resources.garage;
-            this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(16, 10);
-            this.guna2PictureBox7.Name = "guna2PictureBox7";
-            this.guna2PictureBox7.Size = new System.Drawing.Size(29, 33);
-            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox7.TabIndex = 31;
-            this.guna2PictureBox7.TabStop = false;
-            // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.Image = global::FormQLMayTinh.Properties.Resources.apps_sort__1_;
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(16, 11);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(29, 33);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox5.TabIndex = 26;
-            this.guna2PictureBox5.TabStop = false;
-            // 
-            // guna2PictureBox8
-            // 
-            this.guna2PictureBox8.Image = global::FormQLMayTinh.Properties.Resources.comment_1;
-            this.guna2PictureBox8.ImageRotate = 0F;
-            this.guna2PictureBox8.Location = new System.Drawing.Point(33, 68);
-            this.guna2PictureBox8.Name = "guna2PictureBox8";
-            this.guna2PictureBox8.Size = new System.Drawing.Size(29, 33);
-            this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox8.TabIndex = 36;
-            this.guna2PictureBox8.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::FormQLMayTinh.Properties.Resources.user__1__11;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(33, 12);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(29, 33);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 35;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::FormQLMayTinh.Properties.Resources.settings;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(16, 15);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(29, 33);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 34;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::FormQLMayTinh.Properties.Resources.box_open_full;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(16, 112);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(29, 33);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 11;
-            this.guna2PictureBox2.TabStop = false;
-            // 
             // FGiaoDienChuShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -430,19 +399,18 @@
             this.Text = "FGiaoDienChuShop";
             this.pnlThanh.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel5.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.pnlCaiDat.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
-            this.pnlSanPham.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            this.guna2Panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
+            this.pnlCaiDat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.pnlSanPham.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -460,9 +428,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private Guna.UI2.WinForms.Guna2Button btnDonHang;
         private Guna.UI2.WinForms.Guna2Panel pnlCaiDat;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btnTinNhan;
         private Guna.UI2.WinForms.Guna2Button btnTaiKhoan;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;

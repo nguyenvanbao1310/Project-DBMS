@@ -28,9 +28,18 @@ namespace FormQLMayTinh
             if (check)
             {
                 matk = LayMaNguoiDung(txtUserName.Text, txtPassword.Text);
-                FGiaoDienKhachHang f = new FGiaoDienKhachHang();
-                f.ShowDialog();
-                this.Close();
+                if(matk == "admin")
+                {
+                    FGiaoDienChuShop f = new FGiaoDienChuShop();
+                    f.ShowDialog();
+                    this.Hide();
+                }
+                else
+                {
+                    FGiaoDienKhachHang f = new FGiaoDienKhachHang();
+                    f.ShowDialog();
+                    this.Hide();
+                }
             }
             else
             {

@@ -38,7 +38,7 @@ namespace FormQLMayTinh
                     return cmd.ExecuteScalar().ToString();
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Lỗi:" + ex.Message);
 
@@ -69,7 +69,7 @@ namespace FormQLMayTinh
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Lỗi:" + ex.Message);
 
@@ -94,7 +94,7 @@ namespace FormQLMayTinh
                     cmd.ExecuteNonQuery();   
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Lỗi:" + ex.Message);
 

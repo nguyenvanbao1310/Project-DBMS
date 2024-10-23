@@ -40,3 +40,7 @@ C:\Users\ASUS\source\repos\FormQLMayTinh\FormQLMayTinh\obj\Debug\FormQLMayTinh.U
 C:\Users\ASUS\source\repos\FormQLMayTinh\FormQLMayTinh\obj\Debug\FormQLMayTinh.FApDungKhuyenMaiVaoSanPham.resources
 C:\Users\ASUS\source\repos\FormQLMayTinh\FormQLMayTinh\obj\Debug\FormQLMayTinh.UCHoaDonThanhToan.resources
 C:\Users\ASUS\source\repos\FormQLMayTinh\FormQLMayTinh\obj\Debug\FormQLMayTinh.FHuyDonHang.resources
+C:\Users\ASUS\source\repos\FormQLMayTinh\FormQLMayTinh\obj\Debug\FormQLMayTinh.FSuaKhuyenMai.resources
+C:\Users\ASUS\source\repos\FormQLMayTinh\FormQLMayTinh\obj\Debug\FormQLMayTinh.FDanhGia.resources
+C:\Users\ASUS\source\repos\FormQLMayTinh\FormQLMayTinh\obj\Debug\FormQLMayTinh.UCDanhGia.resources
+C:\Users\ASUS\source\repos\FormQLMayTinh\FormQLMayTinh\obj\Debug\FormQLMayTinh.FGhiDanhGia.resources

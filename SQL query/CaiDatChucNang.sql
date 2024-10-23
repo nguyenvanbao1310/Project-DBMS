@@ -1,4 +1,4 @@
-CREATE PROCEDURE CheckTaiKhoan
+﻿CREATE PROCEDURE CheckTaiKhoan
 	@taikhoan varchar(50),
 	@matkhau varchar(255)
 AS
@@ -35,6 +35,12 @@ FROM DonHang INNER JOIN KhachHang ON DonHang.ma_khach_hang = KhachHang.ma_khach_
 CREATE VIEW View_DanhSachKhuyenMai AS
 SELECT ma_khuyen_mai, ten_khuyen_mai, mo_ta, phan_tram_giam, so_tien_giam, ngay_bat_dau, ngay_ket_thuc
 FROM KhuyenMai
+
+--- Xem danh sách sản phẩm khuyến mãi
+CREATE VIEW View_SanPhamKhuyenMai AS
+SELECT *
+FROM SanPham_KhuyenMai
+
 
 EXECUTE XemChiTietMayTinh 'MT09'
 

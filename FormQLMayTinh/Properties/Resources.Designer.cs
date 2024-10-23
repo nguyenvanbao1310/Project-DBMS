@@ -123,6 +123,16 @@ namespace FormQLMayTinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap comment_alt {
+            get {
+                object obj = ResourceManager.GetObject("comment-alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap credit_card_1 {
             get {
                 object obj = ResourceManager.GetObject("credit-card 1", resourceCulture);
@@ -176,6 +186,16 @@ namespace FormQLMayTinh.Properties {
         internal static System.Drawing.Bitmap exit__1_ {
             get {
                 object obj = ResourceManager.GetObject("exit (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Five_of_Five {
+            get {
+                object obj = ResourceManager.GetObject("Five of Five", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

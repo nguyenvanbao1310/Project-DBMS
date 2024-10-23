@@ -79,5 +79,13 @@ namespace FormQLMayTinh
             FKhoKhuyenMai f = new FKhoKhuyenMai();
             OpenForm(f);
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
+        }
     }
 }

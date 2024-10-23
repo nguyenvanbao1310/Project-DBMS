@@ -12,10 +12,15 @@ namespace FormQLMayTinh
 {
     public partial class UCKhuyenMai : UserControl
     {
+        public Label hiddenMoTa;
         public UCKhuyenMai()
         {
             InitializeComponent();
+            hiddenMoTa = new Label();
+            hiddenMoTa.AutoSize = true;
         }
+
+        public event EventHandler CancelButtonClicked;
 
         private void UCKhuyenMai_Load(object sender, EventArgs e)
         {
@@ -31,6 +36,11 @@ namespace FormQLMayTinh
             {
                 return text;
             }
+        }
+
+        private void lblMaKhuyenMai_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CancelButtonClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }

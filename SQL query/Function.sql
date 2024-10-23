@@ -112,3 +112,30 @@ BEGIN
     RETURN @ma_don_hang;
 END;
 GO
+
+---Tạo mã đánh giá
+IF OBJECT_ID('dbo.TaoMaDanhGia', 'FN') IS NOT NULL
+    DROP FUNCTION dbo.TaoMaDanhGia;
+GO
+CREATE FUNCTION dbo.TaoMaDanhGia()
+RETURNS VARCHAR(50)
+AS
+BEGIN
+    DECLARE @ma_danh_gia VARCHAR(50);
+    DECLARE @new_id INT;
+
+    -- Lấy giá trị cao nhất hiện có của mã đánh giá
+    SELECT @new_id = COALESCE(MAX(
+                                    CASE 
+                                        WHEN ma_danh_gia LIKE 'dg%' AND LEN(ma_danh_gia) > 2 
+                                        THEN TRY_CAST(RIGHT(ma_danh_gia, LEN(ma_danh_gia) - 2) AS INT)
+                                        ELSE NULL 
+                                    END), 0) + 1
+    FROM DanhGia;
+
+    -- Tạo mã đánh giá mới với định dạng dg0001, dg0002,...
+    SET @ma_danh_gia = 'dg' + RIGHT('0000' + CAST(@new_id AS VARCHAR), 4); -- Định dạng dg0001, dg0002,...
+
+    RETURN @ma_danh_gia;
+END;
+GO

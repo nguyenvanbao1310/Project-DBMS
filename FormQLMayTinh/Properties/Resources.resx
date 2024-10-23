@@ -121,6 +121,9 @@
   <data name="tải xuống (1) 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tải xuống (1) 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="U Turn to Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\U Turn to Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Free Vector _ Online shop neon sign 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Free Vector _ Online shop neon sign 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -159,6 +162,9 @@
   </data>
   <data name="log-out" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\log-out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Five of Five" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Five of Five.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bar-chart 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bar-chart 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,7 +214,7 @@
   <data name="deal 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deal 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="U Turn to Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\U Turn to Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="comment-alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\comment-alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
