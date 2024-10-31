@@ -281,40 +281,36 @@ GO
 IF OBJECT_ID('dbo.ThemDanhGia', 'P') IS NOT NULL
     DROP PROCEDURE dbo.ThemDanhGia;
 GO
+
 CREATE PROCEDURE dbo.ThemDanhGia
     @ma_khach_hang VARCHAR(50),
-    @ma_don_hang VARCHAR(50),
+    @ma_may_tinh VARCHAR(50),
     @so_sao_danh_gia INT,
-    @ngay_danh_gia DATE,
     @noi_dung NVARCHAR(255)
 AS
 BEGIN
     DECLARE @ma_danh_gia VARCHAR(50);
-    DECLARE @trang_thai INT;
+    SET @ma_danh_gia = dbo.TaoMaDanhGia();  -- Giả sử bạn đã có hàm tạo mã đánh giá
 
-    -- Kiểm tra xem khách hàng có đơn hàng hoàn thành không
-    SELECT @trang_thai = trang_thai
-    FROM DonHang
-    WHERE ma_don_hang = @ma_don_hang AND ma_khach_hang = @ma_khach_hang;
-
-    IF @trang_thai IS NULL
+    -- Kiểm tra xem khách hàng đã đặt hàng sản phẩm này và đơn hàng đã hoàn thành chưa
+    IF EXISTS (
+        SELECT 1
+        FROM DonHang dh
+        JOIN DonHangChiTiet dht ON dh.ma_don_hang = dht.ma_don_hang
+        WHERE dh.ma_khach_hang = @ma_khach_hang 
+          AND dht.ma_may_tinh = @ma_may_tinh 
+          AND dh.trang_thai = 1  -- 1 có thể là trạng thái hoàn thành
+    )
     BEGIN
-        RAISERROR('Bạn không có lịch sử mua sản phẩm này!.', 16, 1);
-        RETURN;
+        -- Thêm đánh giá vào bảng
+        INSERT INTO DanhGia (ma_danh_gia, ma_khach_hang, ma_may_tinh, so_sao_danh_gia, ngay_danh_gia, noi_dung)
+        VALUES (@ma_danh_gia, @ma_khach_hang, @ma_may_tinh, @so_sao_danh_gia, GETDATE(), @noi_dung);
     END
-
-    IF @trang_thai <> 1 -- Trạng thái 1 là "hoàn thành"
+    ELSE
     BEGIN
-        RAISERROR('Đơn hàng chưa hoàn thành hoặc đã bị hủy, không thể đánh giá.', 16, 1);
-        RETURN;
+        -- Nếu không thỏa mãn điều kiện, có thể thông báo hoặc xử lý khác
+        PRINT 'Khách hàng chưa mua sản phẩm này hoặc đơn hàng chưa hoàn thành.';
     END
-
-    -- Tạo mã đánh giá mới
-    SET @ma_danh_gia = dbo.TaoMaDanhGia();
-
-    -- Thêm đánh giá vào bảng
-    INSERT INTO DanhGia (ma_danh_gia, ma_khach_hang, ma_don_hang, so_sao_danh_gia, ngay_danh_gia, noi_dung)
-    VALUES (@ma_danh_gia, @ma_khach_hang, @ma_don_hang, @so_sao_danh_gia, @ngay_danh_gia, @noi_dung);
 END;
 GO
 
@@ -375,6 +371,30 @@ BEGIN
         -- Thêm sản phẩm mới vào giỏ hàng với số lượng là 1
         INSERT INTO GioHang (ma_khach_hang, ma_may_tinh, so_luong)
         VALUES (@ma_khach_hang, @ma_may_tinh, 1);
+    END
+END;
+GO
+
+---Xóa sản phẩm khỏi giỏ hàng
+IF OBJECT_ID('dbo.XoaKhoiGioHang', 'P') IS NOT NULL
+    DROP PROCEDURE dbo.XoaKhoiGioHang;
+GO
+
+CREATE PROCEDURE dbo.XoaKhoiGioHang
+    @ma_khach_hang VARCHAR(50),
+    @ma_may_tinh VARCHAR(50)
+AS
+BEGIN
+    -- Kiểm tra xem sản phẩm có trong giỏ hàng của khách hàng không
+    IF EXISTS (SELECT 1 FROM GioHang WHERE ma_khach_hang = @ma_khach_hang AND ma_may_tinh = @ma_may_tinh)
+    BEGIN
+        -- Xóa sản phẩm khỏi giỏ hàng
+        DELETE FROM GioHang
+        WHERE ma_khach_hang = @ma_khach_hang AND ma_may_tinh = @ma_may_tinh;
+    END
+    ELSE
+    BEGIN
+        PRINT 'Sản phẩm không có trong giỏ hàng.';
     END
 END;
 GO
