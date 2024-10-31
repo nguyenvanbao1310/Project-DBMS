@@ -267,3 +267,112 @@ BEGIN
     RETURN @tong_tien;
 END;
 GO
+
+---Kiem tra du lieu khi them san pham
+IF OBJECT_ID('dbo.CheckSanPhamTruocKhiThem', 'FN') IS NOT NULL
+    DROP FUNCTION dbo.CheckSanPhamTruocKhiThem;
+GO
+CREATE FUNCTION CheckSanPhamTruocKhiThem (
+    @ten_may_tinh NVARCHAR(255),
+    @gia_tien INT,
+    @ton_kho INT,
+    @trong_luong FLOAT,
+    @nam_san_suat INT,
+    @cpu NVARCHAR(255),
+    @ram NVARCHAR(255),
+    @o_cung NVARCHAR(255),
+    @man_hinh NVARCHAR(255),
+    @bao_hanh NVARCHAR(255),
+	@hinh_anh VARBINARY(MAX)
+)
+RETURNS NVARCHAR(255) -- Trả về thông báo lỗi
+AS
+BEGIN
+    DECLARE @errorMessage NVARCHAR(255) = 'Hợp lệ';
+    
+    -- Kiểm tra các trường không được phép null
+    IF @ten_may_tinh IS NULL OR @cpu IS NULL OR 
+       @ram IS NULL OR @o_cung IS NULL OR @man_hinh IS NULL OR @bao_hanh IS NULL OR @hinh_anh IS NULL
+    BEGIN
+        SET @errorMessage = 'Các trường không được phép để trống.';
+        RETURN @errorMessage;
+    END
+
+    -- Kiểm tra giá tiền
+    IF @gia_tien <= 0
+    BEGIN
+        SET @errorMessage = 'Giá tiền phải lớn hơn 0.';
+        RETURN @errorMessage;
+    END
+
+    -- Kiểm tra tồn kho
+    IF @ton_kho < 0
+    BEGIN
+        SET @errorMessage = 'Tồn kho không thể nhỏ hơn 0.';
+        RETURN @errorMessage;
+    END
+
+    -- Kiểm tra trọng lượng
+    IF @trong_luong <= 0
+    BEGIN
+        SET @errorMessage = 'Trọng lượng phải lớn hơn 0.';
+        RETURN @errorMessage;
+    END
+
+    -- Kiểm tra năm sản xuất
+    IF @nam_san_suat < 1900 OR @nam_san_suat > YEAR(GETDATE())
+    BEGIN
+        SET @errorMessage = 'Năm sản xuất không hợp lệ.';
+        RETURN @errorMessage;
+    END
+
+    RETURN @errorMessage; -- Trả về thông báo hợp lệ
+END;
+GO
+
+--- Kiểm tra khuyến mãi trước khi thêm
+IF OBJECT_ID('dbo.CheckKhuyenMaiTruocKhiThem', 'FN') IS NOT NULL
+    DROP FUNCTION dbo.CheckKhuyenMaiTruocKhiThem;
+GO
+CREATE FUNCTION CheckKhuyenMaiTruocKhiThem (
+    @ten_khuyen_mai NVARCHAR(255),
+    @phan_tram_giam FLOAT,
+    @so_tien_giam INT,
+    @ngay_bat_dau DATE,
+    @ngay_ket_thuc DATE
+)
+RETURNS NVARCHAR(255) -- Trả về thông báo lỗi
+AS
+BEGIN
+    DECLARE @errorMessage NVARCHAR(255) = 'Hợp lệ';
+
+    -- Kiểm tra tên khuyến mãi
+    IF @ten_khuyen_mai IS NULL OR @ten_khuyen_mai = ''
+    BEGIN
+        SET @errorMessage = 'Tên khuyến mãi không được để trống.';
+        RETURN @errorMessage;
+    END
+
+    -- Kiểm tra phần trăm giảm giá và số tiền giảm
+    IF @phan_tram_giam < 0 OR (@so_tien_giam IS NOT NULL AND @so_tien_giam < 0)
+    BEGIN
+        SET @errorMessage = 'Phần trăm giảm và số tiền giảm không được âm.';
+        RETURN @errorMessage;
+    END
+
+    -- Kiểm tra ngày bắt đầu và ngày kết thúc
+    IF @ngay_bat_dau IS NULL OR @ngay_ket_thuc IS NULL
+    BEGIN
+        SET @errorMessage = 'Ngày bắt đầu và ngày kết thúc không được để trống.';
+        RETURN @errorMessage;
+    END
+
+    IF @ngay_bat_dau >= @ngay_ket_thuc
+    BEGIN
+        SET @errorMessage = 'Ngày bắt đầu phải trước ngày kết thúc.';
+        RETURN @errorMessage;
+    END
+
+    RETURN @errorMessage; -- Trả về thông báo hợp lệ
+END;
+GO

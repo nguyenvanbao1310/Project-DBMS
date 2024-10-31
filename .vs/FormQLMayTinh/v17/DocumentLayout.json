@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|d:\\dbms\\quanlyshopmaytinh\\project-dbms\\formqlmaytinh\\fkhokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fkhokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\formqlmaytinh\\fkhokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fkhokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\formqlmaytinh\\flichsudonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\flichsudonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -27,7 +35,7 @@
       "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fxemsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|d:\\dbms\\quanlyshopmaytinh\\project-dbms\\formqlmaytinh\\ucquanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\formqlmaytinh\\ucquanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\ucquanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -71,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fgiaodienkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\formqlmaytinh\\fkhokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fkhokhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\formqlmaytinh\\fgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BB5B0B7E-53FC-478B-8737-8015EE56D4AC}|FormQLMayTinh\\FormQLMayTinh.csproj|solutionrelative:formqlmaytinh\\fgiohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -94,95 +98,112 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FQuanLyDonHang.cs [Design]",
-              "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLyDonHang.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLyDonHang.cs",
-              "ToolTip": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLyDonHang.cs [Design]",
-              "RelativeToolTip": "FormQLMayTinh\\FQuanLyDonHang.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "FKhoKhuyenMai.cs",
+              "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "ToolTip": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "RelativeToolTip": "FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:53:10.709Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-23T15:47:46.089Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FQuanLyDanhSachTaiKhoan.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLyDanhSachTaiKhoan.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLyDanhSachTaiKhoan.cs",
               "ToolTip": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLyDanhSachTaiKhoan.cs [Design]",
               "RelativeToolTip": "FormQLMayTinh\\FQuanLyDanhSachTaiKhoan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:57:32.149Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-10T07:57:32.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FLichSuDonHang.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FLichSuDonHang.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FLichSuDonHang.cs",
               "ToolTip": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FLichSuDonHang.cs [Design]",
               "RelativeToolTip": "FormQLMayTinh\\FLichSuDonHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:59:05.964Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-03T07:59:05.964Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "FKhoKhuyenMai.cs [Design]",
+              "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FKhoKhuyenMai.cs",
+              "ToolTip": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FKhoKhuyenMai.cs [Design]*",
+              "RelativeToolTip": "FormQLMayTinh\\FKhoKhuyenMai.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T07:57:40.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FQuanLyDonHang.cs [Design]",
+              "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLyDonHang.cs",
+              "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLyDonHang.cs",
+              "ToolTip": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLyDonHang.cs [Design]",
+              "RelativeToolTip": "FormQLMayTinh\\FQuanLyDonHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:53:10.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "FQuanLySanPham.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLySanPham.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLySanPham.cs",
               "ToolTip": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLySanPham.cs [Design]",
               "RelativeToolTip": "FormQLMayTinh\\FQuanLySanPham.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:49:07.555Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-10T07:49:07.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "FQuanLyThongTinCaNhan.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLyThongTinCaNhan.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLyThongTinCaNhan.cs",
               "ToolTip": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLyThongTinCaNhan.cs [Design]",
               "RelativeToolTip": "FormQLMayTinh\\FQuanLyThongTinCaNhan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T06:12:49.61Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-03T06:12:49.61Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "FXemSanPham.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FXemSanPham.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FXemSanPham.cs",
               "ToolTip": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FXemSanPham.cs [Design]",
               "RelativeToolTip": "FormQLMayTinh\\FXemSanPham.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T08:14:42.507Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-03T08:14:42.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "UCQuanLyTaiKhoan.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\UCQuanLyTaiKhoan.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\UCQuanLyTaiKhoan.cs",
               "ToolTip": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\UCQuanLyTaiKhoan.cs [Design]",
               "RelativeToolTip": "FormQLMayTinh\\UCQuanLyTaiKhoan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T08:06:30.64Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-10T08:06:30.64Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "UCQuanLyDonHang.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\UCQuanLyDonHang.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\UCQuanLyDonHang.cs",
@@ -192,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "UCDanhSachSanPham.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\UCDanhSachSanPham.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\UCDanhSachSanPham.cs",
@@ -202,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "FQuanLyKhoHang.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLyKhoHang.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLyKhoHang.cs",
@@ -212,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "FQuanLySanPham.Designer.cs",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLySanPham.Designer.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLySanPham.Designer.cs",
@@ -220,12 +241,11 @@
               "RelativeToolTip": "FormQLMayTinh\\FQuanLySanPham.Designer.cs",
               "ViewState": "AgIAAOMAAAAAAAAAAADwv+wAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:51:10.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-10T07:51:10.224Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "FQuanLySanPham.cs",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FQuanLySanPham.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FQuanLySanPham.cs",
@@ -233,12 +253,11 @@
               "RelativeToolTip": "FormQLMayTinh\\FQuanLySanPham.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T07:50:48.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-10T07:50:48.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "FGiaoDienChuShop.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FGiaoDienChuShop.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FGiaoDienChuShop.cs",
@@ -248,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "FGiaoDienKhachHang.cs",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FGiaoDienKhachHang.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FGiaoDienKhachHang.cs",
@@ -260,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "FGiaoDienKhachHang.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FGiaoDienKhachHang.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FGiaoDienKhachHang.cs",
@@ -270,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\Form1.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\Form1.cs",
@@ -280,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\Form1.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\Form1.cs",
@@ -292,17 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "FKhoKhuyenMai.cs [Design]",
-              "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FKhoKhuyenMai.cs",
-              "RelativeDocumentMoniker": "FormQLMayTinh\\FKhoKhuyenMai.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\FormQLMayTinh\\FormQLMayTinh\\FKhoKhuyenMai.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:57:40.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "FGioHang.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\FGioHang.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\FGioHang.cs",
@@ -312,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Nhap.cs [Design]",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\Nhap.cs",
               "RelativeDocumentMoniker": "FormQLMayTinh\\Nhap.cs",
@@ -322,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "app.manifest",
               "DocumentMoniker": "D:\\DBMS\\QuanLyShopMayTinh\\Project-DBMS\\FormQLMayTinh\\app.manifest",
               "RelativeDocumentMoniker": "FormQLMayTinh\\app.manifest",

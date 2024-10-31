@@ -28,6 +28,7 @@ GO
 IF OBJECT_ID('dbo.ThemMayTinh', 'P') IS NOT NULL
     DROP PROCEDURE dbo.ThemMayTinh;
 GO
+
 CREATE PROCEDURE ThemMayTinh
     @ten_may_tinh NVARCHAR(255),
     @mo_ta NVARCHAR(255) = NULL,
@@ -41,10 +42,46 @@ CREATE PROCEDURE ThemMayTinh
     @trong_luong FLOAT,
     @nam_san_suat INT,
     @bao_hanh NVARCHAR(255),
-    @hinh_anh VARBINARY(MAX) = NULL
+    @duong_dan NVARCHAR(255) = NULL
 AS
 BEGIN
     DECLARE @ma_may_tinh VARCHAR(50);
+	DECLARE @hinh_anh VARBINARY(MAX);
+    DECLARE @sql NVARCHAR(MAX);
+    DECLARE @checkResult NVARCHAR(255);
+	-- Gán hình ảnh mặc định nếu không có đường dẫn
+    IF @duong_dan IS NULL OR @duong_dan = ''
+    BEGIN
+        SELECT @hinh_anh = BulkColumn
+        FROM OPENROWSET(BULK 'D:\DBMS\MayTinhPic\default.png', SINGLE_BLOB) AS Image;
+    END
+    ELSE
+    BEGIN
+        -- Sử dụng câu lệnh động để gán hình ảnh từ đường dẫn
+        SET @sql = 'SELECT @hinh_anh = BulkColumn FROM OPENROWSET(BULK ''' + @duong_dan + ''', SINGLE_BLOB) AS Image';
+        EXEC sp_executesql @sql, N'@hinh_anh VARBINARY(MAX) OUTPUT', @hinh_anh OUTPUT;
+    END
+    -- Gọi hàm để kiểm tra tính hợp lệ của dữ liệu
+    SET @checkResult = dbo.CheckSanPhamTruocKhiThem(
+        @ten_may_tinh,
+        @gia_tien,
+        @ton_kho,
+        @trong_luong,
+        @nam_san_suat,
+        @cpu,
+        @ram,
+        @o_cung,
+        @man_hinh,
+        @bao_hanh,
+		@hinh_anh
+    );
+
+    -- Nếu dữ liệu không hợp lệ, phát sinh lỗi
+    IF @checkResult <> 'Hợp lệ'
+    BEGIN
+        RAISERROR(@checkResult, 16, 1);
+        RETURN; -- Kết thúc thủ tục nếu có lỗi
+    END
 
     -- Gọi hàm để tạo mã máy tính mới
     SET @ma_may_tinh = dbo.TaoMaMayTinh();
@@ -52,6 +89,9 @@ BEGIN
     -- Thêm máy tính mới vào bảng
     INSERT INTO MayTinh (ma_may_tinh, ten_may_tinh, mo_ta, gia_tien, ton_kho, cpu, ram, o_cung, card_roi, man_hinh, trong_luong, nam_san_suat, bao_hanh, hinh_anh)
     VALUES (@ma_may_tinh, @ten_may_tinh, @mo_ta, @gia_tien, @ton_kho, @cpu, @ram, @o_cung, @card_roi, @man_hinh, @trong_luong, @nam_san_suat, @bao_hanh, @hinh_anh);
+    
+    -- Trả về mã máy tính đã thêm
+    SELECT @ma_may_tinh AS MaMayTinh;
 END;
 GO
 
@@ -117,6 +157,7 @@ GO
 IF OBJECT_ID('dbo.ThemKhuyenMai', 'P') IS NOT NULL
     DROP PROCEDURE dbo.ThemKhuyenMai;
 GO
+
 CREATE PROCEDURE dbo.ThemKhuyenMai
     @ten_khuyen_mai NVARCHAR(255),
     @mo_ta NVARCHAR(255) = NULL,
@@ -127,6 +168,23 @@ CREATE PROCEDURE dbo.ThemKhuyenMai
 AS
 BEGIN
     DECLARE @ma_khuyen_mai VARCHAR(50);
+    DECLARE @checkResult NVARCHAR(255);
+
+    -- Gọi hàm để kiểm tra tính hợp lệ của dữ liệu
+    SET @checkResult = dbo.CheckKhuyenMaiTruocKhiThem(
+        @ten_khuyen_mai,
+        @phan_tram_giam,
+        @so_tien_giam,
+        @ngay_bat_dau,
+        @ngay_ket_thuc
+    );
+
+    -- Nếu dữ liệu không hợp lệ, phát sinh lỗi
+    IF @checkResult <> 'Hợp lệ'
+    BEGIN
+        RAISERROR(@checkResult, 16, 1);
+        RETURN; -- Kết thúc thủ tục nếu có lỗi
+    END
 
     -- Gọi hàm để tạo mã khuyến mãi mới
     SET @ma_khuyen_mai = dbo.TaoMaKhuyenMai();
@@ -134,6 +192,9 @@ BEGIN
     -- Thêm khuyến mãi mới vào bảng
     INSERT INTO KhuyenMai (ma_khuyen_mai, ten_khuyen_mai, mo_ta, phan_tram_giam, so_tien_giam, ngay_bat_dau, ngay_ket_thuc)
     VALUES (@ma_khuyen_mai, @ten_khuyen_mai, @mo_ta, @phan_tram_giam, @so_tien_giam, @ngay_bat_dau, @ngay_ket_thuc);
+    
+    -- Trả về mã khuyến mãi đã thêm
+    SELECT @ma_khuyen_mai AS MaKhuyenMai;
 END;
 GO
 
