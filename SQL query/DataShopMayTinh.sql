@@ -137,7 +137,6 @@ VALUES
 ('MT07', 'KM02');
 
 
-
 INSERT INTO GioHang(ma_khach_hang, ma_may_tinh, so_luong)
 VALUES ('kh0001','MT07',1),
 		('kh0001','MT05',2)
@@ -146,6 +145,15 @@ INSERT INTO KhuyenMai_KhachHang(ma_khach_hang, ma_khuyen_mai, trang_thai)
 VALUES	('kh0001','KM01',1),
 		('kh0001','KM02',1),
 		('kh0001','KM03',1)
+
+INSERT INTO DanhGia (ma_danh_gia, ma_khach_hang, ma_may_tinh, so_sao_danh_gia, ngay_danh_gia, noi_dung)
+VALUES
+('dg0001', 'kh0001', 'MT01', 5, '2024-10-20', N'Rất hài lòng về sản phẩm, chạy rất mượt.'),
+('dg0002', 'kh0002', 'MT02', 4, '2024-10-18', N'Sản phẩm ổn, nhưng giao hàng chậm.'),
+('dg0003', 'kh0003', 'MT03', 3, '2024-10-17', N'Máy khá tốt nhưng pin yếu.'),
+('dg0004', 'kh0004', 'MT01', 2, '2024-10-16', N'Máy chạy nóng, không đúng như mong đợi.'),
+('dg0005', 'kh0005', 'MT02', 1, '2024-10-15', N'Không hài lòng, sản phẩm bị lỗi ngay khi nhận.');
+
 
 SELECT *FROM KhuyenMai
 

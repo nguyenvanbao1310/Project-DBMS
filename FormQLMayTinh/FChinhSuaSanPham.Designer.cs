@@ -256,6 +256,7 @@
             this.lblThemAnh.TabIndex = 14;
             this.lblThemAnh.TabStop = true;
             this.lblThemAnh.Text = "Thêm ảnh";
+            this.lblThemAnh.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblThemAnh_LinkClicked);
             // 
             // guna2Panel4
             // 

@@ -13,7 +13,7 @@ namespace FormQLMayTinh
 {
     public partial class FLichSuDonHang : Form
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         private int trangThai;
         private UCLichSuDonHang ls;
@@ -147,31 +147,37 @@ namespace FormQLMayTinh
 
         }
 
-        private DataTable LoadChiTietDonHang(string ma)
+        private DataTable LoadChiTietDonHang(string maDonHang)
         {
             DataTable dt = new DataTable();
             sqlcon = new SqlConnection(conStr);
+
             try
             {
                 sqlcon.Open();
-                using (SqlCommand cmd = new SqlCommand("dbo.XemChiTietDonHang", sqlcon))
+
+                // Query to call the function
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.LayChiTietDonHang(@ma_don_hang)", sqlcon))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ma_don_hang", ma);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@ma_don_hang", maDonHang);
+
+                    // Fill the DataTable with the result of the function call
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.Fill(dt);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi:" + ex.Message);
-
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
             finally
             {
                 sqlcon.Close();
             }
+
             return dt;
+
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -179,5 +185,97 @@ namespace FormQLMayTinh
             FHuyDonHang f = new FHuyDonHang(ls);
             f.ShowDialog();
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            btnXacNhan.Enabled = false;
+
+            // Lấy từ khóa mã đơn hàng và mã khách hàng từ các TextBox
+
+
+            // Gọi hàm LoadDonHang với từ khóa mã đơn hàng và mã khách hàng
+            DataTable dt = LoadDuLieuTheoTimKiem(txtTimKiem.Text, Form1.matk);
+
+            // Xóa các đơn hàng hiện có trên giao diện
+            flowPanel.Controls.Clear();
+            List<UCLichSuDonHang> usp = new List<UCLichSuDonHang>();
+
+            // Hiển thị từng đơn hàng trong DataTable lên flowPanel
+            foreach (DataRow dr in dt.Rows)
+            {
+                UCLichSuDonHang uc = new UCLichSuDonHang();
+
+                // Gán thông tin đơn hàng từ DataTable vào các nhãn trong UserControl
+                uc.lblDonHang.Text = dr["ma_don_hang"].ToString();
+                uc.lblNgayDatHang.Text = Convert.ToDateTime(dr["ngay_dat_hang"]).ToString("dd/MM/yyyy");
+
+                int trangThai = int.Parse(dr["trang_thai"].ToString());
+                uc.CancelButtonClicked += XemChiTiet;
+
+                // Gán trạng thái đơn hàng dựa trên giá trị của cột 'trang_thai'
+                switch (trangThai)
+                {
+                    case 1:
+                        uc.lblTrangThai.Text = "Hoàn thành";
+                        uc.lblTrangThai.ForeColor = System.Drawing.ColorTranslator.FromHtml("#32E12E");
+                        break;
+                    case 2:
+                        uc.lblTrangThai.Text = "Đang xử lý";
+                        uc.lblTrangThai.ForeColor = System.Drawing.ColorTranslator.FromHtml("#D86817");
+                        break;
+                    case 3:
+                        uc.lblTrangThai.Text = "Đã hủy";
+                        uc.lblTrangThai.ForeColor = System.Drawing.ColorTranslator.FromHtml("#D8173A");
+                        break;
+                }
+
+                usp.Add(uc);
+            }
+
+            // Thêm các UserControl vào flowPanel
+            foreach (UCLichSuDonHang a in usp)
+            {
+                a.Margin = new Padding(10);
+                flowPanel.Controls.Add(a);
+            }
+
+        }
+        private DataTable LoadDuLieuTheoTimKiem(string maDonHang, string maKhachHang)
+        {
+            DataTable dt = new DataTable();
+            sqlcon = new SqlConnection(conStr);
+
+            try
+            {
+                sqlcon.Open();
+
+                // Query to select from the table-valued function TimDonHang
+                string query = "SELECT * FROM dbo.TimDonHang(@ma_don_hang, @ma_khach_hang)";
+
+                using (SqlCommand cmd = new SqlCommand(query, sqlcon))
+                {
+                    // Add the parameters for the function
+                    cmd.Parameters.AddWithValue("@ma_don_hang", maDonHang);
+                    cmd.Parameters.AddWithValue("@ma_khach_hang", maKhachHang);
+
+                    // Execute the query and fill the DataTable
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors and display a message to the user
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                // Close the connection after finishing
+                sqlcon.Close();
+            }
+
+            return dt;
+        }
+
     }
 }

@@ -13,7 +13,7 @@ namespace FormQLMayTinh
 {
     public partial class FTaoKhuyenMai : Form
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         public FTaoKhuyenMai()
         {
@@ -22,76 +22,47 @@ namespace FormQLMayTinh
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string maKM = TaoMaKhuyenMai();
-            ThemKhuyenMai(maKM);
-            ThemKhuyenMai_SanPham(maKM);
-            MessageBox.Show("Thêm khuyến mãi thành công");
+            ThemKhuyenMai();
         }
-        private string TaoMaKhuyenMai()
+        private void ThemKhuyenMai()
         {
+            float phanTram = 0;
+            int soTien = 0;
+            if (cbSanPham.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn mã sản phẩm.");
+                return;
+            }
+            if (rdoPhanTram.Checked == true)
+            {
+                phanTram = float.Parse(txtPhanTramGiam.Text);
+            }
+
+            if (rdoSoTien.Checked == true)
+            {
+                soTien = int.Parse(txtSoTienGiam.Text);
+            }
+
             sqlcon = new SqlConnection(conStr);
             try
             {
-                sqlcon.Open();
-                using (SqlCommand cmd = new SqlCommand("SELECT dbo.TaoMaKhuyenMai();", sqlcon))
+                sqlcon.InfoMessage += (s, ev) =>
                 {
-                    return cmd.ExecuteScalar().ToString();
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Lỗi:" + ex.Message);
-
-            }
-            finally
-            {
-                sqlcon.Close();
-            }
-            return null;
-        }
-
-        private void ThemKhuyenMai(string maKM)
-        {
-            sqlcon = new SqlConnection(conStr);
-            try
-            {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + ev.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
                 sqlcon.Open();
                 using (SqlCommand cmd = new SqlCommand("dbo.ThemKhuyenMai", sqlcon))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ma_khuyen_mai", maKM);
                     cmd.Parameters.AddWithValue("@ten_khuyen_mai", txtTenKhuyenMai.Text);
                     cmd.Parameters.AddWithValue("@mo_ta", txtMoTa.Text);
-                    cmd.Parameters.AddWithValue("@phan_tram_giam", float.Parse(txtPhanTramGiam.Text));
-                    cmd.Parameters.AddWithValue("@so_tien_giam ", null);
+                    cmd.Parameters.AddWithValue("@phan_tram_giam", phanTram);
+                    cmd.Parameters.AddWithValue("@so_tien_giam ", soTien);
                     cmd.Parameters.AddWithValue("@ngay_bat_dau", dtpNgayBatDau.Value.ToString());
                     cmd.Parameters.AddWithValue("@ngay_ket_thuc", dtpNgayKetThuc.Value.ToString());
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Lỗi:" + ex.Message);
-
-            }
-            finally
-            {
-                sqlcon.Close();
-            }
-        }
-
-        private void ThemKhuyenMai_SanPham(string maKM)
-        {
-            sqlcon = new SqlConnection(conStr);
-            try
-            {
-                sqlcon.Open();
-                using (SqlCommand cmd = new SqlCommand("dbo.ThemKhuyenMaiSanPham", sqlcon))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ma_khuyen_mai", maKM);
                     cmd.Parameters.AddWithValue("@ma_may_tinh", cbSanPham.SelectedItem.ToString());
-                    cmd.ExecuteNonQuery();   
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (SqlException ex)
@@ -107,6 +78,9 @@ namespace FormQLMayTinh
 
         private void FTaoKhuyenMai_Load(object sender, EventArgs e)
         {
+            txtSoTienGiam.Enabled = false;
+            txtPhanTramGiam.Enabled = false;
+            ChonHinhThucKhuyenMai();
             sqlcon = new SqlConnection(conStr);
             try
             {
@@ -131,6 +105,31 @@ namespace FormQLMayTinh
             {
                 sqlcon.Close();
             }
+        }
+
+        private void ChonHinhThucKhuyenMai()
+        {
+            if (rdoPhanTram.Checked == true)
+            {
+                txtSoTienGiam.Enabled = false;
+                txtPhanTramGiam.Enabled = true;
+            }
+
+            if (rdoSoTien.Checked == true)
+            {
+                txtSoTienGiam.Enabled = true;
+                txtPhanTramGiam.Enabled = false;
+            }
+        }
+
+        private void rdoPhanTram_CheckedChanged(object sender, EventArgs e)
+        {
+            ChonHinhThucKhuyenMai();
+        }
+
+        private void rdoSoTien_CheckedChanged(object sender, EventArgs e)
+        {
+            ChonHinhThucKhuyenMai();
         }
     }
 }

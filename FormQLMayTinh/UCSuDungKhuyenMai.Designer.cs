@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.pnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblPhanTramGiam = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTenVoucher = new System.Windows.Forms.Label();
             this.btnDung = new Guna.UI2.WinForms.Guna2Button();
             this.txtGiamTD = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblNgayHetHan = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTenSanPham = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblMaSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTenVC = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblPhanTramGiam = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             this.pnl.Controls.Add(this.txtGiamTD);
             this.pnl.Controls.Add(this.lblNgayHetHan);
             this.pnl.Controls.Add(this.guna2HtmlLabel1);
-            this.pnl.Controls.Add(this.lblTenSanPham);
+            this.pnl.Controls.Add(this.lblMaSP);
             this.pnl.Controls.Add(this.label);
             this.pnl.Controls.Add(this.lblTenVC);
             this.pnl.Controls.Add(this.picLogo);
@@ -64,6 +64,16 @@
             this.pnl.Name = "pnl";
             this.pnl.Size = new System.Drawing.Size(571, 104);
             this.pnl.TabIndex = 1;
+            // 
+            // lblPhanTramGiam
+            // 
+            this.lblPhanTramGiam.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhanTramGiam.Location = new System.Drawing.Point(438, 72);
+            this.lblPhanTramGiam.Name = "lblPhanTramGiam";
+            this.lblPhanTramGiam.Size = new System.Drawing.Size(18, 18);
+            this.lblPhanTramGiam.TabIndex = 18;
+            this.lblPhanTramGiam.Text = "so";
+            this.lblPhanTramGiam.Visible = false;
             // 
             // lblTenVoucher
             // 
@@ -138,15 +148,15 @@
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "Sắp hết hạn:";
             // 
-            // lblTenSanPham
+            // lblMaSP
             // 
-            this.lblTenSanPham.BackColor = System.Drawing.Color.Transparent;
-            this.lblTenSanPham.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSanPham.Location = new System.Drawing.Point(224, 39);
-            this.lblTenSanPham.Name = "lblTenSanPham";
-            this.lblTenSanPham.Size = new System.Drawing.Size(114, 25);
-            this.lblTenSanPham.TabIndex = 12;
-            this.lblTenSanPham.Text = "Tên sản phẩm";
+            this.lblMaSP.BackColor = System.Drawing.Color.Transparent;
+            this.lblMaSP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaSP.Location = new System.Drawing.Point(224, 39);
+            this.lblMaSP.Name = "lblMaSP";
+            this.lblMaSP.Size = new System.Drawing.Size(110, 25);
+            this.lblMaSP.TabIndex = 12;
+            this.lblMaSP.Text = "mã sản phẩm";
             // 
             // label
             // 
@@ -154,9 +164,9 @@
             this.label.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.Location = new System.Drawing.Point(108, 39);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(114, 25);
+            this.label.Size = new System.Drawing.Size(115, 25);
             this.label.TabIndex = 11;
-            this.label.Text = "Tên sản phẩm";
+            this.label.Text = "Mã sản phẩm:";
             // 
             // lblTenVC
             // 
@@ -177,16 +187,6 @@
             this.picLogo.Size = new System.Drawing.Size(83, 77);
             this.picLogo.TabIndex = 9;
             this.picLogo.TabStop = false;
-            // 
-            // lblPhanTramGiam
-            // 
-            this.lblPhanTramGiam.BackColor = System.Drawing.Color.Transparent;
-            this.lblPhanTramGiam.Location = new System.Drawing.Point(438, 72);
-            this.lblPhanTramGiam.Name = "lblPhanTramGiam";
-            this.lblPhanTramGiam.Size = new System.Drawing.Size(18, 18);
-            this.lblPhanTramGiam.TabIndex = 18;
-            this.lblPhanTramGiam.Text = "so";
-            this.lblPhanTramGiam.Visible = false;
             // 
             // UCSuDungKhuyenMai
             // 
@@ -210,7 +210,7 @@
         public Guna.UI2.WinForms.Guna2TextBox txtGiamTD;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblNgayHetHan;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        public Guna.UI2.WinForms.Guna2HtmlLabel lblTenSanPham;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblMaSP;
         private Guna.UI2.WinForms.Guna2HtmlLabel label;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblTenVC;
         public Guna.UI2.WinForms.Guna2PictureBox picLogo;

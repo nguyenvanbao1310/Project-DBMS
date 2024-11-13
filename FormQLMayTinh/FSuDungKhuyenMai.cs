@@ -13,7 +13,7 @@ namespace FormQLMayTinh
 {
     public partial class FSuDungKhuyenMai : Form
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         public FSuDungKhuyenMai()
         {
@@ -58,7 +58,7 @@ namespace FormQLMayTinh
                 if (Convert.ToDateTime(dr["ngay_ket_thuc"]) > DateTime.Now)
                 {
                     uc.lblTenVoucher.Text = dr["ten_khuyen_mai"].ToString();
-                    uc.lblTenSanPham.Text = dr["ten_may_tinh"].ToString();
+                    uc.lblMaSP.Text = dr["ten_may_tinh"].ToString();
                     int phan_tram_giam = int.Parse(dr["phan_tram_giam"].ToString());
                     uc.txtGiamTD.Text = "% giảm: "+phan_tram_giam.ToString();
                     uc.lblNgayHetHan.Text = Convert.ToDateTime(dr["ngay_ket_thuc"]).ToString("dd/MM/yyyy");

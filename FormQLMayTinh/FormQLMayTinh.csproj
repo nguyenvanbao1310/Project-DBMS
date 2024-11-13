@@ -67,11 +67,23 @@
     <Compile Include="FChinhSuaSanPham.Designer.cs">
       <DependentUpon>FChinhSuaSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangKi.Designer.cs">
+      <DependentUpon>FDangKi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FDanhGia.Designer.cs">
       <DependentUpon>FDanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDanhThu.Designer.cs">
+      <DependentUpon>FDanhThu.cs</DependentUpon>
     </Compile>
     <Compile Include="FGhiDanhGia.cs">
       <SubType>Form</SubType>
@@ -133,12 +145,6 @@
     <Compile Include="FQuanLyDonHang.Designer.cs">
       <DependentUpon>FQuanLyDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FQuanLyKhoHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FQuanLyKhoHang.Designer.cs">
-      <DependentUpon>FQuanLyKhoHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="FQuanLySanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,12 @@
     </Compile>
     <Compile Include="FQuanLyThongTinCaNhan.Designer.cs">
       <DependentUpon>FQuanLyThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSoSanh2MayTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSoSanh2MayTinh.Designer.cs">
+      <DependentUpon>FSoSanh2MayTinh.cs</DependentUpon>
     </Compile>
     <Compile Include="FSuaKhuyenMai.cs">
       <SubType>Form</SubType>
@@ -273,8 +285,14 @@
     <EmbeddedResource Include="FChinhSuaSanPham.resx">
       <DependentUpon>FChinhSuaSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FDangKi.resx">
+      <DependentUpon>FDangKi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDanhGia.resx">
       <DependentUpon>FDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDanhThu.resx">
+      <DependentUpon>FDanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FGhiDanhGia.resx">
       <DependentUpon>FGhiDanhGia.cs</DependentUpon>
@@ -306,14 +324,14 @@
     <EmbeddedResource Include="FQuanLyDonHang.resx">
       <DependentUpon>FQuanLyDonHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FQuanLyKhoHang.resx">
-      <DependentUpon>FQuanLyKhoHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FQuanLySanPham.resx">
       <DependentUpon>FQuanLySanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FQuanLyThongTinCaNhan.resx">
       <DependentUpon>FQuanLyThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSoSanh2MayTinh.resx">
+      <DependentUpon>FSoSanh2MayTinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSuaKhuyenMai.resx">
       <DependentUpon>FSuaKhuyenMai.cs</DependentUpon>
@@ -434,6 +452,8 @@
     <None Include="Resources\add-to-basket 1.png" />
     <None Include="Resources\Five of Five.png" />
     <None Include="Resources\comment-alt.png" />
+    <None Include="Resources\popular 1.png" />
+    <None Include="Resources\code-compare.png" />
     <Content Include="Resources\profile 1.png" />
     <None Include="Resources\purchase-order 1.png" />
     <None Include="Resources\shopping-cart 1.png" />

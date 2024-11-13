@@ -39,14 +39,14 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnTao = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
+            this.picTimKiem = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblDanhSachTaiKhoan = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.picTimKiem = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -178,6 +178,19 @@
             this.guna2HtmlLabel10.TabIndex = 120;
             this.guna2HtmlLabel10.Text = "Mã tài khoản";
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::FormQLMayTinh.Properties.Resources.plus__1_;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(787, 85);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(30, 20);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 119;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // btnTao
             // 
             this.btnTao.BorderRadius = 15;
@@ -197,6 +210,19 @@
             this.btnTao.Text = "Tạo tài khoản";
             this.btnTao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = global::FormQLMayTinh.Properties.Resources.refresh__1_;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(648, 85);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(30, 20);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 117;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // btnRefresh
             // 
             this.btnRefresh.BorderRadius = 15;
@@ -215,6 +241,20 @@
             this.btnRefresh.TabIndex = 116;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // picTimKiem
+            // 
+            this.picTimKiem.BackColor = System.Drawing.Color.Transparent;
+            this.picTimKiem.FillColor = System.Drawing.Color.Transparent;
+            this.picTimKiem.Image = global::FormQLMayTinh.Properties.Resources.Search;
+            this.picTimKiem.ImageRotate = 0F;
+            this.picTimKiem.Location = new System.Drawing.Point(564, 78);
+            this.picTimKiem.Name = "picTimKiem";
+            this.picTimKiem.Size = new System.Drawing.Size(32, 33);
+            this.picTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTimKiem.TabIndex = 115;
+            this.picTimKiem.TabStop = false;
+            this.picTimKiem.Click += new System.EventHandler(this.picTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -260,45 +300,6 @@
             this.flowPanel.Name = "flowPanel";
             this.flowPanel.Size = new System.Drawing.Size(1336, 764);
             this.flowPanel.TabIndex = 2;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::FormQLMayTinh.Properties.Resources.plus__1_;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(787, 85);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(30, 20);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 119;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::FormQLMayTinh.Properties.Resources.refresh__1_;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(648, 85);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(30, 20);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 117;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // picTimKiem
-            // 
-            this.picTimKiem.BackColor = System.Drawing.Color.Transparent;
-            this.picTimKiem.FillColor = System.Drawing.Color.Transparent;
-            this.picTimKiem.Image = global::FormQLMayTinh.Properties.Resources.Search;
-            this.picTimKiem.ImageRotate = 0F;
-            this.picTimKiem.Location = new System.Drawing.Point(564, 78);
-            this.picTimKiem.Name = "picTimKiem";
-            this.picTimKiem.Size = new System.Drawing.Size(32, 33);
-            this.picTimKiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTimKiem.TabIndex = 115;
-            this.picTimKiem.TabStop = false;
             // 
             // FQuanLyDanhSachTaiKhoan
             // 

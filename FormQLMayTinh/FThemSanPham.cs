@@ -14,7 +14,7 @@ namespace FormQLMayTinh
 {
     public partial class FThemSanPham : Form
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         public FThemSanPham()
         {
             InitializeComponent();
@@ -22,12 +22,25 @@ namespace FormQLMayTinh
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            byte[] imageBytes = ConvertImageToByteArray(txtFileAnh.Text);
+            if (!int.TryParse(txtGiaTien.Text, out int giaTien) ||
+            !int.TryParse(NumericSL.Text, out int soLuongTon) ||
+            !float.TryParse(txtTrongLuong.Text, out float trongLuong))
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại định dạng của giá tiền, số lượng tồn và trọng lượng.");
+                return;
+            }
+ 
             try
             {
                 using (SqlConnection conn = new SqlConnection(conStr))
                 {
-                    using (SqlCommand cmd = new SqlCommand("ThemMayTinh", conn))
+                    conn.InfoMessage += (s, ev) =>
+                    {
+                        // Hiển thị thông báo từ SQL Server qua MessageBox
+                        MessageBox.Show("SQL Server Message: " + ev.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    };
+  
+                    using (SqlCommand cmd = new SqlCommand("dbo.ThemMayTinh", conn))
                     {
                         conn.Open();
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -45,13 +58,10 @@ namespace FormQLMayTinh
                         cmd.Parameters.AddWithValue("@trong_luong", float.Parse(txtTrongLuong.Text));
                         cmd.Parameters.AddWithValue("@nam_san_suat", dtpNamSanXuat.Value.Year);
                         cmd.Parameters.AddWithValue("@bao_hanh", txtBaoHanh.Text);
-                        cmd.Parameters.AddWithValue("@hinh_anh", imageBytes);
+                        cmd.Parameters.AddWithValue("@duong_dan", txtFileAnh.Text);
                         cmd.ExecuteNonQuery();
-                        conn.Close();
                     }
                 }
-
-                MessageBox.Show("Máy tính đã được thêm thành công!");
             }
             catch (SqlException sqlEx)
             {

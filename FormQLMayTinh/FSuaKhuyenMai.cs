@@ -13,7 +13,7 @@ namespace FormQLMayTinh
 {
     public partial class FSuaKhuyenMai : Form
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         private UCKhuyenMai uc;
         private List<string> list = new List<string>();
@@ -26,6 +26,7 @@ namespace FormQLMayTinh
         private void FSuaKhuyenMai_Load(object sender, EventArgs e)
         {
             cbSanPham.Items.Clear();
+            cbSanPham.Items.Add("All");
             cbThemMaSP.Items.Clear();
             txtTenKhuyenMai.Text = uc.lblTenKhuyenMai.Text;
             txtMoTa.Text = uc.hiddenMoTa.Text;
@@ -122,6 +123,11 @@ namespace FormQLMayTinh
             sqlcon = new SqlConnection(conStr);
             try
             {
+                sqlcon.InfoMessage += (s, ev) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + ev.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
                 sqlcon.Open();
                 using (SqlCommand cmd = new SqlCommand("dbo.SuaKhuyenMai", sqlcon))
                 {
@@ -150,7 +156,6 @@ namespace FormQLMayTinh
             {
                 ThemKhuyenMai_SanPham(uc.lblMaKhuyenMai.Text);
             }
-            MessageBox.Show("Sửa thành công");
         }
 
         private void ThemKhuyenMai_SanPham(string maKM)
@@ -197,6 +202,12 @@ namespace FormQLMayTinh
                     sqlcon = new SqlConnection(conStr);
                     try
                     {
+                        sqlcon.InfoMessage += (s, ev) =>
+                        {
+                            // Hiển thị thông báo từ SQL Server qua MessageBox
+                            MessageBox.Show("SQL Server Message: " + ev.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        };
+
                         sqlcon.Open();
                         using (SqlCommand cmd = new SqlCommand("dbo.XoaKhuyenMai", sqlcon))
                         {
@@ -214,7 +225,6 @@ namespace FormQLMayTinh
                     {
                         sqlcon.Close();
                     }
-                    MessageBox.Show("Xóa khuyến mãi thành công");
                     this.Hide();
                 }
                 else
@@ -240,7 +250,6 @@ namespace FormQLMayTinh
                     {
                         sqlcon.Close();
                     }
-                    MessageBox.Show("Xóa khuyến mãi - sản phẩm thành công");
                     FSuaKhuyenMai_Load(sender, e);
                 }
                 

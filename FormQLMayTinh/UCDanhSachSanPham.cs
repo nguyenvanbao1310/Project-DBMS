@@ -13,12 +13,14 @@ namespace FormQLMayTinh
 {
     public partial class UCDanhSachSanPham : UserControl
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
-        SqlConnection sqlcon = null;
+
         public UCDanhSachSanPham()
         {
             InitializeComponent();
         }
+
+        public event EventHandler CancelButtonClicked;
+
         private string TruncateText(string text, int maxLength)
         {
             if (text.Length > maxLength)
@@ -45,33 +47,11 @@ namespace FormQLMayTinh
 
         private void picXoa_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (sqlcon = new SqlConnection(conStr))
-                {
-                    using (SqlCommand cmd = new SqlCommand("dbo.XoaMayTinh", sqlcon))
-                    {
-                        sqlcon.Open();
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@ma_may_tinh", lblMaSP.Text);
-                        cmd.ExecuteNonQuery();
-                        sqlcon.Close();
-                    }
-                }
-                MessageBox.Show("Xóa thành công!");
-            }
-            catch (SqlException sqlEx)
-            {
-                MessageBox.Show($"Lỗi SQL: {sqlEx.Message}");
-            }
-            catch (FormatException formatEx)
-            {
-                MessageBox.Show($"Lỗi định dạng dữ liệu: {formatEx.Message}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}");
-            }
+            CancelButtonClicked?.Invoke(this, EventArgs.Empty);
         }
+
+
+
+       
     }
 }

@@ -48,5 +48,7 @@ namespace FormQLMayTinh
         {
             CancelButtonClicked?.Invoke(this, EventArgs.Empty);
         }
+
+       
     }
 }

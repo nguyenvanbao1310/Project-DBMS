@@ -33,6 +33,8 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbSanPham = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblMaSanPham = new System.Windows.Forms.Label();
             this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblThongTin = new System.Windows.Forms.Label();
             this.dtpNgayKetThuc = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -50,8 +52,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
-            this.lblMaSanPham = new System.Windows.Forms.Label();
-            this.cbSanPham = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.rdoPhanTram = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdoSoTien = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -116,6 +118,8 @@
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
             this.guna2Panel3.BorderRadius = 10;
             this.guna2Panel3.BorderThickness = 2;
+            this.guna2Panel3.Controls.Add(this.rdoSoTien);
+            this.guna2Panel3.Controls.Add(this.rdoPhanTram);
             this.guna2Panel3.Controls.Add(this.cbSanPham);
             this.guna2Panel3.Controls.Add(this.lblMaSanPham);
             this.guna2Panel3.Controls.Add(this.txtMoTa);
@@ -136,6 +140,32 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(742, 386);
             this.guna2Panel3.TabIndex = 54;
+            // 
+            // cbSanPham
+            // 
+            this.cbSanPham.BackColor = System.Drawing.Color.Transparent;
+            this.cbSanPham.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSanPham.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSanPham.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSanPham.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSanPham.ItemHeight = 30;
+            this.cbSanPham.Location = new System.Drawing.Point(402, 65);
+            this.cbSanPham.Name = "cbSanPham";
+            this.cbSanPham.Size = new System.Drawing.Size(193, 36);
+            this.cbSanPham.TabIndex = 22;
+            // 
+            // lblMaSanPham
+            // 
+            this.lblMaSanPham.AutoSize = true;
+            this.lblMaSanPham.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
+            this.lblMaSanPham.Location = new System.Drawing.Point(398, 34);
+            this.lblMaSanPham.Name = "lblMaSanPham";
+            this.lblMaSanPham.Size = new System.Drawing.Size(114, 23);
+            this.lblMaSanPham.TabIndex = 21;
+            this.lblMaSanPham.Text = "Mã sản phẩm";
             // 
             // txtMoTa
             // 
@@ -273,7 +303,7 @@
             this.lblPhanTramGiam.AutoSize = true;
             this.lblPhanTramGiam.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhanTramGiam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
-            this.lblPhanTramGiam.Location = new System.Drawing.Point(88, 113);
+            this.lblPhanTramGiam.Location = new System.Drawing.Point(111, 113);
             this.lblPhanTramGiam.Name = "lblPhanTramGiam";
             this.lblPhanTramGiam.Size = new System.Drawing.Size(133, 23);
             this.lblPhanTramGiam.TabIndex = 13;
@@ -308,7 +338,7 @@
             this.lblSoTienGiam.AutoSize = true;
             this.lblSoTienGiam.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoTienGiam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
-            this.lblSoTienGiam.Location = new System.Drawing.Point(398, 113);
+            this.lblSoTienGiam.Location = new System.Drawing.Point(421, 113);
             this.lblSoTienGiam.Name = "lblSoTienGiam";
             this.lblSoTienGiam.Size = new System.Drawing.Size(111, 23);
             this.lblSoTienGiam.TabIndex = 7;
@@ -409,31 +439,49 @@
             this.btnHuy.TabIndex = 130;
             this.btnHuy.Text = "Hủy";
             // 
-            // lblMaSanPham
+            // rdoPhanTram
             // 
-            this.lblMaSanPham.AutoSize = true;
-            this.lblMaSanPham.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
-            this.lblMaSanPham.Location = new System.Drawing.Point(398, 34);
-            this.lblMaSanPham.Name = "lblMaSanPham";
-            this.lblMaSanPham.Size = new System.Drawing.Size(114, 23);
-            this.lblMaSanPham.TabIndex = 21;
-            this.lblMaSanPham.Text = "Mã sản phẩm";
+            this.rdoPhanTram.AutoSize = true;
+            this.rdoPhanTram.BackColor = System.Drawing.Color.White;
+            this.rdoPhanTram.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoPhanTram.CheckedState.BorderThickness = 0;
+            this.rdoPhanTram.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoPhanTram.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoPhanTram.CheckedState.InnerOffset = -4;
+            this.rdoPhanTram.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.rdoPhanTram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
+            this.rdoPhanTram.Location = new System.Drawing.Point(92, 117);
+            this.rdoPhanTram.Name = "rdoPhanTram";
+            this.rdoPhanTram.Size = new System.Drawing.Size(17, 16);
+            this.rdoPhanTram.TabIndex = 23;
+            this.rdoPhanTram.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoPhanTram.UncheckedState.BorderThickness = 2;
+            this.rdoPhanTram.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoPhanTram.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdoPhanTram.UseVisualStyleBackColor = false;
+            this.rdoPhanTram.CheckedChanged += new System.EventHandler(this.rdoPhanTram_CheckedChanged);
             // 
-            // cbSanPham
+            // rdoSoTien
             // 
-            this.cbSanPham.BackColor = System.Drawing.Color.Transparent;
-            this.cbSanPham.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSanPham.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSanPham.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSanPham.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbSanPham.ItemHeight = 30;
-            this.cbSanPham.Location = new System.Drawing.Point(402, 65);
-            this.cbSanPham.Name = "cbSanPham";
-            this.cbSanPham.Size = new System.Drawing.Size(193, 36);
-            this.cbSanPham.TabIndex = 22;
+            this.rdoSoTien.AutoSize = true;
+            this.rdoSoTien.BackColor = System.Drawing.Color.White;
+            this.rdoSoTien.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoSoTien.CheckedState.BorderThickness = 0;
+            this.rdoSoTien.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoSoTien.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoSoTien.CheckedState.InnerOffset = -4;
+            this.rdoSoTien.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.rdoSoTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
+            this.rdoSoTien.Location = new System.Drawing.Point(402, 117);
+            this.rdoSoTien.Name = "rdoSoTien";
+            this.rdoSoTien.Size = new System.Drawing.Size(17, 16);
+            this.rdoSoTien.TabIndex = 24;
+            this.rdoSoTien.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoSoTien.UncheckedState.BorderThickness = 2;
+            this.rdoSoTien.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoSoTien.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdoSoTien.UseVisualStyleBackColor = false;
+            this.rdoSoTien.CheckedChanged += new System.EventHandler(this.rdoSoTien_CheckedChanged);
             // 
             // FTaoKhuyenMai
             // 
@@ -489,5 +537,7 @@
         private Guna.UI2.WinForms.Guna2Button btnHuy;
         private System.Windows.Forms.Label lblMaSanPham;
         private Guna.UI2.WinForms.Guna2ComboBox cbSanPham;
+        private Guna.UI2.WinForms.Guna2RadioButton rdoSoTien;
+        private Guna.UI2.WinForms.Guna2RadioButton rdoPhanTram;
     }
 }

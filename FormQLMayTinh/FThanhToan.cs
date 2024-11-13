@@ -16,7 +16,7 @@ namespace FormQLMayTinh
 {
     public partial class FThanhToan : Form
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         private DataTable dt;
        
@@ -116,12 +116,15 @@ namespace FormQLMayTinh
             int goc = int.Parse(ls.lblGiaTien.Text);
             FApDungKhuyenMaiVaoSanPham f = new FApDungKhuyenMaiVaoSanPham(ls.lblMaSanPham.Text);
             f.ShowDialog();
-            double tru = FApDungKhuyenMaiVaoSanPham.phanTram/100.0;
-            
-            ls.lblGiaTien.Text = (int.Parse(ls.lblGiaTien.Text) * tru).ToString();
+            if(FApDungKhuyenMaiVaoSanPham.maKM != null)
+            {
+                ls.lblGiaTien.Text = TienSauKhiKhuyenMai(ls.lblMaSanPham.Text, FApDungKhuyenMaiVaoSanPham.maKM).ToString();
+
+            }
+
             int giam = goc - int.Parse(ls.lblGiaTien.Text);
             ls.linkchon.Visible = false;
-            ls.txtChonVoucher.Text = "GIẢM GIÁ " + (100 - FApDungKhuyenMaiVaoSanPham.phanTram).ToString() + "%";
+            ls.txtChonVoucher.Text = "GIẢM GIÁ " + FApDungKhuyenMaiVaoSanPham.phanTram + "%";
             ls.txtChonVoucher.BorderColor = System.Drawing.ColorTranslator.FromHtml("#D8173A");
             ls.txtChonVoucher.ForeColor = System.Drawing.ColorTranslator.FromHtml("#D8173A");
             int sum = int.Parse(txtTienSanPham.Text) - giam * int.Parse(ls.lblSoLuong.Text);
@@ -222,12 +225,12 @@ namespace FormQLMayTinh
                 sqlcon.Open();
                 using (SqlCommand cmd = new SqlCommand("dbo.XoaKhoiGioHang", sqlcon))
                 {
-                    
+
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ma_khach_hang", Form1.matk);
                     cmd.Parameters.AddWithValue("@ma_may_tinh", ma);
                     cmd.ExecuteNonQuery();
-                    
+
                 }
             }
             catch (Exception ex)
@@ -239,6 +242,42 @@ namespace FormQLMayTinh
             {
                 sqlcon.Close();
             }
+        }
+
+        private int TienSauKhiKhuyenMai(string maMT, string maKM)
+        {
+            sqlcon = new SqlConnection(conStr);
+
+            try
+            {
+                sqlcon.Open();
+
+                // Query to select from the table-valued function LayThongTinChiTietSanPham
+                using (SqlCommand command = new SqlCommand("SELECT dbo.ApDungKhuyenMai(@ma_may_tinh, @ma_khuyen_mai)", sqlcon))
+                {
+                    // Thêm tham số cho hàm
+                    command.Parameters.AddWithValue("@ma_may_tinh", maMT);
+                    command.Parameters.AddWithValue("@ma_khuyen_mai", maKM);
+
+                    // Thực thi lệnh và lấy kết quả
+                    object result = command.ExecuteScalar();
+
+                    // Kiểm tra kết quả và trả về
+                    return result != null ? Convert.ToInt32(result) : 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Display any errors
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                // Close the connection
+                sqlcon.Close();
+            }
+            return 0;
+
         }
 
     }

@@ -66,12 +66,12 @@ CREATE TABLE DonHang (
 CREATE TABLE DanhGia (
     ma_danh_gia VARCHAR(50) PRIMARY KEY,
     ma_khach_hang VARCHAR(50),
-    ma_don_hang VARCHAR(50),
+    ma_may_tinh VARCHAR(50),
     so_sao_danh_gia INT CHECK (so_sao_danh_gia BETWEEN 1 AND 5),
     ngay_danh_gia DATE,
-    noi_dung TEXT,
+    noi_dung NVARCHAR(255),
     FOREIGN KEY (ma_khach_hang) REFERENCES KhachHang(ma_khach_hang),
-    FOREIGN KEY (ma_don_hang) REFERENCES DonHang(ma_don_hang)
+    FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh) ON DELETE CASCADE
 );
 
 CREATE TABLE DonHangChiTiet (
@@ -144,4 +144,8 @@ FOREIGN KEY (ma_may_tinh) REFERENCES MayTinh(ma_may_tinh) ON DELETE CASCADE;
 ALTER TABLE SanPham_KhuyenMai
 ADD CONSTRAINT FK_SanPhamKhuyenMai_KhuyenMai
 FOREIGN KEY (ma_khuyen_mai) REFERENCES KhuyenMai(ma_khuyen_mai) ON DELETE CASCADE;
+
+
+
+
 

@@ -113,6 +113,16 @@ namespace FormQLMayTinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap code_compare {
+            get {
+                object obj = ResourceManager.GetObject("code-compare", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap comment_1 {
             get {
                 object obj = ResourceManager.GetObject("comment 1", resourceCulture);
@@ -276,6 +286,16 @@ namespace FormQLMayTinh.Properties {
         internal static System.Drawing.Bitmap plus__1_ {
             get {
                 object obj = ResourceManager.GetObject("plus (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap popular_1 {
+            get {
+                object obj = ResourceManager.GetObject("popular 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -87,5 +87,11 @@ namespace FormQLMayTinh
             f.Show();
             this.Hide();
         }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            FDanhThu f = new FDanhThu();
+            OpenForm(f);
+        }
     }
 }

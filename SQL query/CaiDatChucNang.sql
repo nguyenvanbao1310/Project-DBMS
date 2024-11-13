@@ -49,3 +49,4 @@ SELECT *FROM View_MayTinh
 SELECT *FROM View_ThongTinKhachHang
 SELECT *FROM View_DanhSachDonHang
 SELECT *FROM View_DanhSachKhuyenMai
+SELECT *FROM TaiKhoan

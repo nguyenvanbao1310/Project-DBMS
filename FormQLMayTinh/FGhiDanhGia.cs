@@ -13,7 +13,7 @@ namespace FormQLMayTinh
 {
     public partial class FGhiDanhGia : Form
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         public FGhiDanhGia()
         {
@@ -155,6 +155,11 @@ namespace FormQLMayTinh
             sqlcon = new SqlConnection(conStr);
             try
             {
+                sqlcon.InfoMessage += (s, ev) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + ev.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
                 sqlcon.Open();
                 using (SqlCommand cmd = new SqlCommand("dbo.ThemDanhGia", sqlcon))
                 {
@@ -165,7 +170,7 @@ namespace FormQLMayTinh
                     cmd.Parameters.AddWithValue("@noi_dung", txtNoiDungDG.Text);
                     cmd.ExecuteNonQuery();
                 }
-                MessageBox.Show("Đánh giá thành công");
+                
             }
             catch (SqlException ex)
             {

@@ -14,7 +14,7 @@ namespace FormQLMayTinh
 {
     public partial class FXemChiTietSanPham : Form
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         private string ma;
         public FXemChiTietSanPham(string ma)
@@ -67,27 +67,37 @@ namespace FormQLMayTinh
         {
             DataTable dt = new DataTable();
             sqlcon = new SqlConnection(conStr);
+
             try
             {
                 sqlcon.Open();
-                using (SqlCommand cmd = new SqlCommand("dbo.XemChiTietMayTinh", sqlcon))
+
+                // Query to select from the table-valued function LayThongTinChiTietSanPham
+                string query = "SELECT * FROM dbo.LayThongTinChiTietSanPham(@ma_may_tinh)";
+
+                using (SqlCommand cmd = new SqlCommand(query, sqlcon))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Set the function parameter
                     cmd.Parameters.AddWithValue("@ma_may_tinh", ma);
+
+                    // Execute the query and fill the DataTable
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.Fill(dt);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi:" + ex.Message);
-
+                // Display any errors
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
             finally
             {
+                // Close the connection
                 sqlcon.Close();
             }
+
             return dt;
+
 
         }
 

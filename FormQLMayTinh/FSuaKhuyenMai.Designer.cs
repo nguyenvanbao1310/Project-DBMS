@@ -33,6 +33,9 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.bntThem = new Guna.UI2.WinForms.Guna2Button();
+            this.cbThemMaSP = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cbSanPham = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblMaSanPham = new System.Windows.Forms.Label();
             this.txtMoTa = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,9 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
-            this.cbThemMaSP = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bntThem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -143,6 +143,50 @@
             this.guna2Panel3.Size = new System.Drawing.Size(775, 386);
             this.guna2Panel3.TabIndex = 54;
             // 
+            // bntThem
+            // 
+            this.bntThem.BorderRadius = 10;
+            this.bntThem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bntThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bntThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bntThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bntThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
+            this.bntThem.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntThem.ForeColor = System.Drawing.Color.White;
+            this.bntThem.Location = new System.Drawing.Point(686, 75);
+            this.bntThem.Name = "bntThem";
+            this.bntThem.Size = new System.Drawing.Size(67, 26);
+            this.bntThem.TabIndex = 134;
+            this.bntThem.Text = "Thêm";
+            this.bntThem.Click += new System.EventHandler(this.bntThem_Click);
+            // 
+            // cbThemMaSP
+            // 
+            this.cbThemMaSP.BackColor = System.Drawing.Color.Transparent;
+            this.cbThemMaSP.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbThemMaSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbThemMaSP.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbThemMaSP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbThemMaSP.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbThemMaSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbThemMaSP.ItemHeight = 30;
+            this.cbThemMaSP.Location = new System.Drawing.Point(554, 65);
+            this.cbThemMaSP.Name = "cbThemMaSP";
+            this.cbThemMaSP.Size = new System.Drawing.Size(113, 36);
+            this.cbThemMaSP.TabIndex = 24;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
+            this.label3.Location = new System.Drawing.Point(550, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 23);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Chọn mã sản phẩm";
+            // 
             // cbSanPham
             // 
             this.cbSanPham.BackColor = System.Drawing.Color.Transparent;
@@ -153,6 +197,8 @@
             this.cbSanPham.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbSanPham.ItemHeight = 30;
+            this.cbSanPham.Items.AddRange(new object[] {
+            "All"});
             this.cbSanPham.Location = new System.Drawing.Point(402, 65);
             this.cbSanPham.Name = "cbSanPham";
             this.cbSanPham.Size = new System.Drawing.Size(113, 36);
@@ -443,50 +489,6 @@
             this.btnXoa.TabIndex = 132;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // cbThemMaSP
-            // 
-            this.cbThemMaSP.BackColor = System.Drawing.Color.Transparent;
-            this.cbThemMaSP.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbThemMaSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbThemMaSP.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbThemMaSP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbThemMaSP.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbThemMaSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbThemMaSP.ItemHeight = 30;
-            this.cbThemMaSP.Location = new System.Drawing.Point(554, 65);
-            this.cbThemMaSP.Name = "cbThemMaSP";
-            this.cbThemMaSP.Size = new System.Drawing.Size(113, 36);
-            this.cbThemMaSP.TabIndex = 24;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
-            this.label3.Location = new System.Drawing.Point(550, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 23);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Chọn mã sản phẩm";
-            // 
-            // bntThem
-            // 
-            this.bntThem.BorderRadius = 10;
-            this.bntThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bntThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bntThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bntThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bntThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(107)))), ((int)(((byte)(186)))));
-            this.bntThem.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntThem.ForeColor = System.Drawing.Color.White;
-            this.bntThem.Location = new System.Drawing.Point(686, 75);
-            this.bntThem.Name = "bntThem";
-            this.bntThem.Size = new System.Drawing.Size(67, 26);
-            this.bntThem.TabIndex = 134;
-            this.bntThem.Text = "Thêm";
-            this.bntThem.Click += new System.EventHandler(this.bntThem_Click);
             // 
             // FSuaKhuyenMai
             // 

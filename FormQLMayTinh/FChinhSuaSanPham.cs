@@ -14,7 +14,7 @@ namespace FormQLMayTinh
 {
     public partial class FChinhSuaSanPham : Form
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         private string ma;
         public FChinhSuaSanPham(string ma)
@@ -95,10 +95,24 @@ namespace FormQLMayTinh
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+            // Kiểm tra định dạng dữ liệu
+            if (!int.TryParse(txtGiaTien.Text, out int giaTien) ||
+                !int.TryParse(NumericSL.Text, out int soLuongTon) ||
+                !float.TryParse(txtTrongLuong.Text, out float trongLuong))
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại định dạng của giá tiền, số lượng tồn và trọng lượng.");
+                return;
+            }
             try
             {
                 using (SqlConnection conn = new SqlConnection(conStr))
                 {
+                    conn.InfoMessage += (s, ev) =>
+                    {
+                        // Hiển thị thông báo từ SQL Server qua MessageBox
+                        MessageBox.Show("SQL Server Message: " + ev.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    };
                     using (SqlCommand cmd = new SqlCommand("dbo.SuaMayTinh", conn))
                     {
                         conn.Open();
@@ -128,8 +142,6 @@ namespace FormQLMayTinh
                         conn.Close();
                     }
                 }
-
-                MessageBox.Show("Máy tính đã được sửa thành công!");
             }
             catch (SqlException sqlEx)
             {
@@ -156,6 +168,22 @@ namespace FormQLMayTinh
                     bmp.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
                 return ms.ToArray();
+            }
+        }
+
+        private void lblThemAnh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+            openFileDialog.Title = "Chọn hình ảnh";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Lưu đường dẫn tệp đã chọn
+                txtFileAnh.Text = openFileDialog.FileName;
+                // Hiển thị hình ảnh trong PictureBox
+                picAnh.Image = Image.FromFile(txtFileAnh.Text);
+                picAnh.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
     }

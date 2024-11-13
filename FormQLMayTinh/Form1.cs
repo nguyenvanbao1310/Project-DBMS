@@ -17,6 +17,8 @@ namespace FormQLMayTinh
         private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
         SqlConnection sqlcon = null;
         public static string matk;
+        public static string username;
+        public static string password;
         public Form1()
         {
             InitializeComponent();
@@ -24,12 +26,15 @@ namespace FormQLMayTinh
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           bool check= CheckTaiKhoan(txtUserName.Text, txtPassword.Text);
+            bool check = CheckTaiKhoan(txtUserName.Text, txtPassword.Text);
             if (check)
             {
+                username = txtUserName.Text;
+                password = txtPassword.Text;
                 matk = LayMaNguoiDung(txtUserName.Text, txtPassword.Text);
-                if(matk == "admin")
+                if (matk == "admin")
                 {
+                    
                     FGiaoDienChuShop f = new FGiaoDienChuShop();
                     f.ShowDialog();
                     this.Hide();
@@ -44,7 +49,7 @@ namespace FormQLMayTinh
             else
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác");
-            }    
+            }
         }
 
         private bool CheckTaiKhoan(string username, string password)
@@ -67,9 +72,9 @@ namespace FormQLMayTinh
                         return trangThai == 1;
                     }
                 }
-                catch (Exception ex)
+                catch (SqlException ex)
                 {
-                    MessageBox.Show("Lỗi:" +ex.Message);
+                    MessageBox.Show("Lỗi:" + ex.Message);
                     return false;
                 }
             }
@@ -92,7 +97,7 @@ namespace FormQLMayTinh
                         return (string)cmd.ExecuteScalar();
                     }
                 }
-                catch (Exception ex)
+                catch (SqlException ex)
                 {
                     MessageBox.Show("Lỗi:" + ex.Message);
                     return null;
@@ -100,6 +105,10 @@ namespace FormQLMayTinh
             }
         }
 
-        
+        private void lblDangKi_Click(object sender, EventArgs e)
+        {
+            FDangKi f = new FDangKi(); 
+            f.ShowDialog();
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace FormQLMayTinh
     public partial class FHuyDonHang : Form
     {
         private UCLichSuDonHang uc;
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         public FHuyDonHang(UCLichSuDonHang uc)
         {

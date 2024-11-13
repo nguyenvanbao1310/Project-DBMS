@@ -222,6 +222,7 @@
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTimKiem.TextOffset = new System.Drawing.Point(25, -3);
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 

@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FormQLMayTinh
 {
     public partial class UCSanPham : UserControl
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         public UCSanPham()
         {
@@ -42,28 +43,39 @@ namespace FormQLMayTinh
             DialogResult result = MessageBox.Show("Bạn có chắc chắn với sự lựa chọn này không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                sqlcon = new SqlConnection(conStr);
-                try
-                {
-                    sqlcon.Open();
-                    using (SqlCommand cmd = new SqlCommand("dbo.ThemVaoGioHang", sqlcon))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@ma_khach_hang", Form1.matk);
-                        cmd.Parameters.AddWithValue("@ma_may_tinh", lblMaSP.Text);
-                        cmd.ExecuteScalar();
-                        MessageBox.Show("Thêm thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi:" + ex.Message);
-
-                }
-              
+               
+                ThemSanPhamVaoGioHang(lblMaSP.Text);
             }
 
 
+        }
+
+       
+        private void ThemSanPhamVaoGioHang(string ma)
+        {
+            sqlcon = new SqlConnection(conStr);
+            try
+            {
+                sqlcon.InfoMessage += (s, ev) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + ev.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+                sqlcon.Open();
+                using (SqlCommand cmd = new SqlCommand("dbo.ThemVaoGioHang", sqlcon))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ma_khach_hang", Form1.matk);
+                    cmd.Parameters.AddWithValue("@ma_may_tinh", ma);
+                    cmd.ExecuteScalar();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi:" + ex.Message);
+
+            }
         }
 
         private void picChiTiet_Click(object sender, EventArgs e)

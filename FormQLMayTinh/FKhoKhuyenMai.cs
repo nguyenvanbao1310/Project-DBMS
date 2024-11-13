@@ -13,7 +13,7 @@ namespace FormQLMayTinh
 {
     public partial class FKhoKhuyenMai : Form
     {
-        private String conStr = "Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;Integrated Security=True";
+        private String conStr = $"Data Source=LAPTOP-76436L4E\\SQLEXPRESS;Initial Catalog=ShopMayTinh;User ID={Form1.username};Password={Form1.password};";
         SqlConnection sqlcon = null;
         public FKhoKhuyenMai()
         {
@@ -109,5 +109,82 @@ namespace FormQLMayTinh
                 f.ShowDialog();
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string tuKhoa = txtTimKiem.Text;
+            DataTable sp = LoadDuLieuTheoTimKiem(tuKhoa);
+            flowPanel.Controls.Clear();
+            List<UCKhuyenMai> usp = new List<UCKhuyenMai>();
+            foreach (DataRow dr in sp.Rows)
+            {
+                UCKhuyenMai uc = new UCKhuyenMai();
+                uc.lblMaKhuyenMai.Text = dr["ma_khuyen_mai"].ToString();
+                uc.lblTenKhuyenMai.Text = dr["ten_khuyen_mai"].ToString();
+                uc.lblMoTa.Text = dr["mo_ta"].ToString();
+                uc.lblNgayBatDau.Text = Convert.ToDateTime(dr["ngay_bat_dau"]).ToString("MM/dd/yyyy");
+                uc.lblNgayKetThuc.Text = Convert.ToDateTime(dr["ngay_ket_thuc"]).ToString("MM/dd/yyyy");
+                uc.hiddenMoTa.Text = dr["mo_ta"].ToString();
+                uc.CancelButtonClicked += XemChiTiet;
+                if (dr["phan_tram_giam"] == DBNull.Value)
+                {
+                    uc.lblPhanTramGiam.Text = "Không có";
+                }
+                else
+                {
+                    uc.lblPhanTramGiam.Text = dr["phan_tram_giam"].ToString();
+                }
+                if (dr["so_tien_giam"] == DBNull.Value)
+                {
+                    uc.lblSoTienGiam.Text = "Không có";
+
+                }
+                else
+                {
+                    uc.lblSoTienGiam.Text = dr["so_tien_giam"].ToString();
+                }
+                usp.Add(uc);
+
+            }
+            foreach (UCKhuyenMai a in usp)
+            {
+                a.Margin = new Padding(0, 10, 0, 0);
+                flowPanel.Controls.Add(a);
+            }
+
+        }
+
+        private DataTable LoadDuLieuTheoTimKiem(string tuKhoa)
+        {
+            DataTable dt = new DataTable();
+            sqlcon = new SqlConnection(conStr);
+
+            try
+            {
+                sqlcon.Open();
+
+                // Query to call the function
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.TimKhuyenMai(@tu_khoa)", sqlcon))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@tu_khoa", string.IsNullOrEmpty(tuKhoa) ? (object)DBNull.Value : tuKhoa);
+
+                    // Fill the DataTable with the result of the function call
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                sqlcon.Close();
+            }
+
+            return dt;
+        }
+
     }
 }
